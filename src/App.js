@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import ButtonExamples from "./examples/ButtonExamples";
+import Sidebar from "./layouts/sidebar";
+import {
+
+    Routes,
+    Route,
+} from "react-router-dom";
+import ButtonIconExamples from "./examples/ButtonIconExamples";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="w-full mx-auto">
+            <div className="flex">
+                <Sidebar/>
+                <div className="ml-[200px] my-20 px-10">
+                        <Routes>
+                            <Route path={'/buttons'} element={<ButtonExamples/>}/>
+                            <Route path={'/buttons-icon'} element={<ButtonIconExamples/>}/>
+
+                        </Routes>
+                </div>
+            </div>
+            {/*<ButtonExamples/>*/}
+        </div>
+    );
 }
 
 export default App;

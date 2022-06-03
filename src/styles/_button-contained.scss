@@ -1,0 +1,61 @@
+///'blue', 'light-blue','green','light-green','lime','red','pink','purple','deep-purple','teal','yellow','amber','orange','deep-orange'
+&.fo-button-contained {
+  @apply border;
+  &.fo-has-shadow{
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+  }
+
+
+  &.fo-button-blue {
+    @apply bg-button-blue text-white  hover:bg-opacity-80 focus:bg-opacity-80;
+  }
+  &.fo-button-light-blue{
+    @apply bg-button-light-blue text-white  hover:bg-opacity-80 focus:bg-opacity-90;
+  }
+  &.fo-button-green{
+    @apply bg-button-green border-button-green text-white  hover:bg-opacity-80 focus:bg-opacity-90;
+  }
+  &.fo-button-light-green{
+    @apply bg-button-light-green border-button-light-green text-white  hover:bg-opacity-80 focus:bg-opacity-90;
+  }
+
+  &.fo-button-lime{
+    @apply bg-button-lime border-button-lime text-green-900  hover:bg-opacity-80 focus:bg-opacity-90;
+  }
+
+ &.fo-button-red{
+    @apply bg-button-red border-button-red text-white  hover:bg-opacity-80 focus:bg-opacity-90;
+  }
+
+ &.fo-button-pink{
+    @apply bg-button-pink border-button-pink text-white  hover:bg-opacity-80 focus:bg-opacity-90;
+  }
+
+  &.fo-button-purple{
+    @apply bg-button-purple border-button-purple text-white  hover:bg-opacity-80 focus:bg-opacity-90;
+  }
+
+  &.fo-button-deep-purple{
+    @apply bg-button-deep-purple border-button-deep-purple text-white  hover:bg-opacity-80 focus:bg-opacity-90;
+  }
+
+  &.fo-button-teal{
+    @apply bg-button-teal border-button-teal text-white  hover:bg-opacity-80 focus:bg-opacity-90;
+  }
+
+  &.fo-button-yellow{
+    @apply bg-button-yellow border-button-yellow text-yellow-900 hover:bg-opacity-75 focus:bg-opacity-90;
+  }
+
+  &.fo-button-amber{
+    @apply bg-button-amber border-button-amber text-white hover:bg-opacity-75 focus:bg-opacity-90;
+  }
+
+  &.fo-button-orange{
+    @apply bg-button-orange border-button-orange text-white hover:bg-opacity-75 focus:bg-opacity-90;
+  }
+  &.fo-button-deep-orange{
+    @apply bg-button-deep-orange border-button-deep-orange text-white hover:bg-opacity-75 focus:bg-opacity-90;
+  }
+
+}

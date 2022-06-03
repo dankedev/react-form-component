@@ -1,0 +1,56 @@
+&.fo-button-text {
+  @apply border-0 ;
+
+  &.fo-button-blue {
+    @apply text-button-blue  hover:text-opacity-80 focus:text-opacity-80;
+  }
+  &.fo-button-light-blue{
+    @apply text-button-light-blue  hover:text-opacity-80 focus:text-opacity-90;
+  }
+  &.fo-button-green{
+    @apply text-button-green hover:text-opacity-80 focus:text-opacity-90;
+  }
+  &.fo-button-light-green{
+    @apply text-button-light-green   hover:text-opacity-80 focus:text-opacity-90;
+  }
+
+  &.fo-button-lime{
+    @apply text-button-lime   hover:text-opacity-80 focus:text-opacity-90;
+  }
+
+  &.fo-button-red{
+    @apply text-button-red  hover:text-opacity-80 focus:text-opacity-90;
+  }
+
+  &.fo-button-pink{
+    @apply text-button-pink  hover:text-opacity-80 focus:text-opacity-90;
+  }
+
+  &.fo-button-purple{
+    @apply text-button-purple  hover:text-opacity-80 focus:text-opacity-90;
+  }
+
+  &.fo-button-deep-purple{
+    @apply text-button-deep-purple   hover:text-opacity-80 focus:text-opacity-90;
+  }
+
+  &.fo-button-teal{
+    @apply text-button-teal hover:text-opacity-80 focus:text-opacity-90;
+  }
+
+  &.fo-button-yellow{
+    @apply text-button-yellow  hover:text-opacity-75 focus:text-opacity-90;
+  }
+
+  &.fo-button-amber{
+    @apply text-button-amber  hover:text-opacity-75 focus:text-opacity-90;
+  }
+
+  &.fo-button-orange{
+    @apply text-button-orange hover:text-opacity-75 focus:text-opacity-90;
+  }
+  &.fo-button-deep-orange{
+    @apply text-button-deep-orange  hover:text-opacity-75 focus:text-opacity-90;
+  }
+
+}

@@ -1,0 +1,81 @@
+
+.fo-button {
+  @apply rounded text-button-blue  items-center border-transparent outline-transparent justify-center relative overflow-hidden gap-1 focus:outline-none focus:shadow-none focus:ring-0 transition-all duration-300  disabled:opacity-50 tracking-wider;
+  .fo-button-text {
+    @apply focus:border-0;
+  }
+
+  &:not(.fo-text-not-uppercase) {
+    @apply uppercase;
+  }
+  &.fo-button-icon{
+    @apply w-0 h-0;
+  }
+
+
+
+  &.fo-button-outlined {
+    @apply border-blue-500;
+  }
+
+  &:not(.fo-button-text) {
+    @apply border;
+  }
+
+  &:not(.fo-light) {
+    @apply font-bold;
+  }
+
+  &.fo-block {
+    @apply flex w-full;
+    &.fo-button-icon{
+      @apply inline-flex w-auto;
+    }
+  }
+
+  &.fo-button-sm {
+    @apply px-3 py-1 text-xs;
+
+  }
+
+  &.fo-button-md {
+    @apply px-4 py-1.5 text-sm;
+    &.fo-button-icon{
+      @apply leading-none px-4 py-4;
+    }
+  }
+
+  &.fo-button-lg {
+    @apply px-5 py-2 text-base;
+    &.fo-button-icon{
+      @apply leading-none px-5 py-5 text-3xl;
+    }
+  }
+
+  &.fo-button-xl {
+    @apply px-6 py-3 text-lg;
+    &.fo-button-icon{
+      @apply leading-none px-7 py-7 text-4xl ;
+    }
+  }
+
+  &.fo-button-2xl {
+    @apply px-6 py-3 text-xl;
+    &.fo-button-icon{
+      @apply leading-none px-7 py-7 text-4xl ;
+    }
+  }
+
+  &.fo-button-3xl {
+    @apply px-6 py-5 text-2xl;
+    &.fo-button-icon{
+      @apply leading-none px-8 py-8 text-4xl ;
+    }
+  }
+
+  @import "button-contained";
+  @import "button-outlined";
+  @import "button-text";
+
+
+}
