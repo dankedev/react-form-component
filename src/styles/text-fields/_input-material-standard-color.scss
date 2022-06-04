@@ -1,0 +1,172 @@
+
+&.fo-input-inherit {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-b-gray-500;
+    }
+    &:focus + .fo-md-label{
+      @apply text-gray-600;
+    }
+  }
+}
+
+&.fo-input-blue {
+  .fo-input {
+
+    ~ .fo-material-line:after {
+      @apply border-b-button-blue;
+    }
+    &:focus + .fo-md-label{
+      @apply text-button-blue;
+    }
+  }
+}
+
+&.fo-input-light-blue {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-b-button-light-blue;
+    } &:focus + .fo-md-label{
+        @apply text-button-light-blue;
+      }
+
+  }
+
+}
+
+&.fo-input-green {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-b-button-green;
+    }
+    &:focus + .fo-md-label{
+      @apply text-button-green;
+    }
+  }
+}
+
+&.fo-input-light-green {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-b-button-light-green;
+    }
+    &:focus + .fo-md-label{
+      @apply text-button-light-green;
+    }
+  }
+}
+
+&.fo-input-lime {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-b-button-lime;
+    }
+    &:focus + .fo-md-label{
+      @apply text-button-lime;
+    }
+
+  }
+}
+
+&.fo-input-red {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-b-button-red;
+    }
+    &:focus + .fo-md-label{
+      @apply text-button-red;
+    }
+
+  }
+}
+
+&.fo-input-pink {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-b-button-pink;
+    }
+
+    &:focus + .fo-md-label{
+      @apply text-button-pink;
+    }
+  }
+}
+
+&.fo-input-purple {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-button-purple;
+    }
+    &:focus + .fo-md-label{
+      @apply text-button-purple;
+    }
+
+  }
+}
+
+&.fo-input-deep-purple {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-button-deep-purple;
+    }
+    &:focus + .fo-md-label{
+      @apply text-button-deep-purple;
+    }
+  }
+}
+
+&.fo-input-teal {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-button-teal;
+    }
+    &:focus + .fo-md-label{
+      @apply text-button-teal
+    }
+  }
+}
+
+&.fo-input-yellow {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-button-yellow;
+    }
+    &:focus + .fo-md-label{
+      @apply text-button-yellow
+    }
+  }
+}
+
+&.fo-input-amber {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-button-amber;
+    }
+    &:focus + .fo-md-label{
+      @apply text-button-amber
+    }
+  }
+}
+
+&.fo-input-orange {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-b-button-orange;
+    }
+    &:focus + .fo-md-label{
+      @apply text-button-orange
+    }
+  }
+}
+
+&.fo-input-deep-orange {
+  .fo-input {
+    ~ .fo-material-line:after {
+      @apply border-button-deep-orange ;
+    }
+
+    &:focus + .fo-md-label{
+      @apply text-button-deep-orange
+    }
+  }
+}

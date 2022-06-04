@@ -1,0 +1,24 @@
+.w-input-wrap{
+  &.fo-input-sm{
+    @apply space-y-1
+
+  }
+  &.fo-input-md{
+    @apply space-y-1
+
+  }
+  &.fo-input-lg{
+    @apply space-y-1.5
+  }
+
+  &.fo-input-xl{
+    @apply space-y-1.5
+  }
+  &.fo-input-2xl{
+    @apply space-y-2
+  }
+  &.fo-input-3xl{
+    @apply space-y-2
+  }
+
+}

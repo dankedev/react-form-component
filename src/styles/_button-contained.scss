@@ -6,7 +6,7 @@
   }
 
 
-  &.fo-button-blue {
+  &.fo-button-blue,&.fo-button-inherit {
     @apply bg-button-blue text-white  hover:bg-opacity-80 focus:bg-opacity-80;
   }
   &.fo-button-light-blue{

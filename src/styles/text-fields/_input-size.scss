@@ -1,0 +1,34 @@
+
+&.fo-input-sm{
+  .fo-input{
+    @apply px-3 py-3 text-xs;
+  }
+
+}
+&.fo-input-md{
+  .fo-input{
+    @apply px-3 py-4 h-4 text-sm;
+  }
+
+}
+&.fo-input-lg{
+  .fo-input{
+    @apply px-4 py-5 ;
+  }
+}
+
+&.fo-input-xl{
+  .fo-input{
+    @apply px-3 py-6 h-3 text-lg;
+  }
+}
+&.fo-input-2xl{
+  .fo-input{
+    @apply px-4 py-6 h-0 text-xl;
+  }
+}
+&.fo-input-3xl{
+  .fo-input{
+    @apply px-6 py-9 h-3 text-2xl;
+  }
+}

@@ -11,19 +11,20 @@ const Sidebar = () => {
       label:'Button Icons',
       link:'/buttons-icon'
     },
+
     {
-      label:'Icons',
-      link:'/icons'
+      label:'Text Field',
+      link:'/text-field'
     },
     {
-      label:'Input',
-      link:'/input-fields'
+      label:'Text Field Material Default',
+      link:'/text-field-md-default'
     },
   ]
   return(<div className={'w-[200px] h-screen fixed left-0 top-0 bg-gray-50 border-r py-6'}>
     <div className={'font-bold px-3'}>Pilih component</div>
     <nav className="flex flex-col gap-0">
-      {components.map(item => <Link className={'block px-3 py-2 hover:bg-gray-100'} key={`sidebar-item-${item.label}`} to={item.link}>{item.label}</Link>)}
+      {components.map(item => <Link className={'block text-sm px-3 py-2 hover:bg-gray-100'} key={`sidebar-item-${item.label}`} to={item.link}>{item.label}</Link>)}
 
     </nav>
   </div>)

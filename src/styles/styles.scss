@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.w-content{
+  width: calc(100% - 200px);
+}
 @import "buttons";
 @import "icon";
+@import "text-fields/text-field";

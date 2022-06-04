@@ -1,0 +1,59 @@
+.fo-input-label, .fo-md-label, input.fo-input {
+  @apply block text-gray-600;
+}
+
+@import "input-label-size";
+@import "text-field-wrap";
+.fo-text-input {
+  @apply relative;
+  .fo-input{
+    @apply  border-0 outline-0 shadow-none drop-shadow-none appearance-none focus:outline-0 focus:border-0 focus:outline-offset-0 focus:shadow-none focus-visible:outline-0 focus-visible:border-0 focus-visible:outline-offset-0 focus-visible:shadow-none;
+  }
+
+  input,
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="week"],
+  textarea,
+  select,
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    &.fo-input {
+      @apply bg-transparent placeholder-gray-300;
+      &:focus-visible{
+        outline: none;
+      }
+    }
+  }
+
+
+
+  @import "input-size";
+
+  @import "input-default";
+  @import "input-material-standard";
+}
+
+

@@ -1,0 +1,66 @@
+
+&.fo-input-sm{
+  .fo-md-label{
+    transform: translateY(-22px) scale(1);
+  }
+
+  .fo-input:focus,.fo-input:not(:placeholder-shown){
+    + .fo-md-label{
+      transform: translateY(-32px) scale(.75);
+    }
+  }
+
+}
+&.fo-input-md{
+  .fo-md-label{
+    transform: translateY(-28px) scale(1);
+  }
+  .fo-input:focus,.fo-input:not(:placeholder-shown){
+    + .fo-md-label{
+      transform: translateY(-40px) scale(.75);
+    }
+  }
+}
+&.fo-input-lg{
+  .fo-md-label{
+    transform: translateY(-34px) scale(1);
+  }
+  .fo-input:focus,.fo-input:not(:placeholder-shown){
+    + .fo-md-label{
+      transform: translateY(-52px) scale(.75);
+    }
+  }
+}
+
+&.fo-input-xl{
+  .fo-md-label{
+    transform: translateY(-38px) scale(1);
+  }
+  .fo-input:focus,.fo-input:not(:placeholder-shown){
+    + .fo-md-label{
+      transform: translateY(-60px) scale(.75);
+    }
+  }
+}
+&.fo-input-2xl{
+  .fo-md-label{
+    transform: translateY(-40px) scale(1);
+  }
+  .fo-input:focus,.fo-input:not(:placeholder-shown){
+    + .fo-md-label{
+      transform: translateY(-61px) scale(.75);
+    }
+  }
+}
+&.fo-input-3xl{
+  .fo-md-label{
+    @apply text-2xl;
+    transform: translateY(-50px) scale(1);
+  }
+
+  .fo-input:focus,.fo-input:not(:placeholder-shown){
+    + .fo-md-label{
+      transform: translateY(-85px) scale(.65);
+    }
+  }
+}

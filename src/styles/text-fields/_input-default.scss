@@ -1,0 +1,138 @@
+&.fo-input-default{
+  input,
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="week"],
+  textarea,
+  select,
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    &.fo-input {
+      @apply border h-1 focus:ring;
+    }
+  }
+  .fo-input {
+    @apply  rounded-md  align-middle leading-none;
+  }
+
+  &.fo-input-inherit {
+    .fo-input{
+      @apply border-gray-300  focus:ring-gray-100;
+    }
+  }
+  &.fo-input-blue {
+    .fo-input{
+      @apply  border-button-blue focus:ring-blue-100;
+    }
+  }
+
+  &.fo-input-light-blue{
+    .fo-input{
+      @apply border-button-light-blue focus:ring-blue-100;
+    }
+
+  }
+
+  &.fo-input-green{
+    .fo-input{
+      @apply border-button-green  focus:ring-green-100;
+    }
+  }
+  &.fo-input-light-green{
+    .fo-input{
+      @apply border-button-light-green focus:ring-green-50;
+    }
+  }
+
+  &.fo-input-lime{
+    .fo-input{
+      @apply border-button-lime focus:ring-lime-100;
+
+    }
+  }
+
+  &.fo-input-red{
+    .fo-input{
+      @apply border-button-red  focus:ring-red-200;
+
+    }
+  }
+
+  &.fo-input-pink{
+    .fo-input{
+      @apply border-button-pink focus:ring-pink-100;
+
+    }
+  }
+
+  &.fo-input-purple{
+    .fo-input{
+      @apply border-button-purple focus:ring-purple-100;
+
+    }
+  }
+
+  &.fo-input-deep-purple{
+    .fo-input{
+      @apply border-button-deep-purple focus:ring-purple-200;
+
+    }
+  }
+
+  &.fo-input-teal{
+    .fo-input{
+      @apply border-button-teal focus:ring-teal-100;
+
+    }
+  }
+
+  &.fo-input-yellow{
+    .fo-input{
+      @apply border-button-yellow focus:ring-yellow-100;
+
+    }
+  }
+
+  &.fo-input-amber{
+    .fo-input{
+      @apply border-button-amber focus:ring-amber-100;
+
+    }
+  }
+
+  &.fo-input-orange{
+    .fo-input{
+      @apply border-button-orange focus:ring-orange-100;
+
+    }
+  }
+  &.fo-input-deep-orange{
+    .fo-input{
+      @apply border-button-deep-orange focus:ring-orange-200;
+
+    }
+  }
+
+}

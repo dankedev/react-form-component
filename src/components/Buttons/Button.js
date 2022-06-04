@@ -1,6 +1,6 @@
 import {forwardRef} from "react";
 import PropTypes from 'prop-types';
-import Ripple from './ripple';
+import Ripple from '../components-helper/ripple';
 
 const Button = forwardRef(({
                                children,
