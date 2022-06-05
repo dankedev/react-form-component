@@ -1,0 +1,141 @@
+
+&.fo-input-inherit {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-gray-600;
+    }
+  }
+}
+
+&.fo-input-blue {
+  .fo-input {
+
+
+    &:focus + .fo-md-label{
+      @apply text-button-blue;
+    }
+  }
+}
+
+&.fo-input-light-blue {
+  .fo-input {
+    &:focus + .fo-md-label{
+        @apply text-button-light-blue;
+      }
+
+  }
+
+}
+
+&.fo-input-green {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-button-green;
+    }
+  }
+}
+
+&.fo-input-light-green {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-button-light-green;
+    }
+  }
+}
+
+&.fo-input-lime {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-button-lime;
+    }
+
+  }
+}
+
+&.fo-input-red {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-button-red;
+    }
+
+  }
+}
+
+&.fo-input-pink {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-button-pink;
+    }
+  }
+}
+
+&.fo-input-purple {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-button-purple;
+    }
+
+  }
+}
+
+&.fo-input-deep-purple {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-button-deep-purple;
+    }
+  }
+}
+
+&.fo-input-teal {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-button-teal
+    }
+  }
+}
+
+&.fo-input-yellow {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-button-yellow
+    }
+  }
+}
+
+&.fo-input-amber {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-button-amber
+    }
+  }
+}
+
+&.fo-input-orange {
+  .fo-input {
+
+    &:focus + .fo-md-label{
+      @apply text-button-orange
+    }
+  }
+}
+
+&.fo-input-deep-orange {
+  .fo-input {
+
+
+    &:focus + .fo-md-label{
+      @apply text-button-deep-orange
+    }
+  }
+}

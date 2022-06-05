@@ -1,0 +1,14 @@
+&.fo-input-filled{
+  @apply bg-gray-100 rounded-t pt-4;
+  .fo-md-label{
+    @apply bg-transparent transition-all px-4;
+  }
+  .fo-input {
+    @apply px-4;
+    &:focus + .fo-md-label,&:not(:placeholder-shown) + .fo-md-label{
+      @apply   left-3 px-2 line-clamp-1;
+      max-width: calc(100% - 2rem);
+
+    }
+  }
+}

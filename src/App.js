@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import ButtonIconExamples from "./examples/ButtonIconExamples";
 import TextFieldExample from "./examples/TextFieldExample";
-import TextFieldMaterialStandardExample from "./examples/TextFieldMaterialStandardExample";
+import TextFieldMaterialExample from "./examples/TextFieldMaterialExample";
 
 function App() {
     return (
@@ -19,7 +19,9 @@ function App() {
                             <Route path={'/buttons'} element={<ButtonExamples/>}/>
                             <Route path={'/buttons-icon'} element={<ButtonIconExamples/>}/>
                             <Route path={'/text-field'} element={<TextFieldExample/>}/>
-                            <Route path={'/text-field-md-default'} element={<TextFieldMaterialStandardExample/>}/>
+                            <Route path={'/text-field-md-default'} element={<TextFieldMaterialExample variant={'standard'}/>}/>
+                            <Route path={'/text-field-md-outlined'} element={<TextFieldMaterialExample variant={'outlined'}/>}/>
+                            <Route path={'/text-field-md-filled'} element={<TextFieldMaterialExample variant={'filled'}/>}/>
 
                         </Routes>
                 </div>

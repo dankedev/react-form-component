@@ -20,6 +20,14 @@ const Sidebar = () => {
       label:'Text Field Material Default',
       link:'/text-field-md-default'
     },
+    {
+      label:'Text Field Material Outlined',
+      link:'/text-field-md-outlined'
+    },
+    {
+      label:'Text Field Material Filled',
+      link:'/text-field-md-filled'
+    },
   ]
   return(<div className={'w-[200px] h-screen fixed left-0 top-0 bg-gray-50 border-r py-6'}>
     <div className={'font-bold px-3'}>Pilih component</div>

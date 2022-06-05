@@ -2,7 +2,7 @@ import {TextField} from "../components/TextField";
 import {Button} from "../components/Buttons";
 
 
-const TextFieldMaterialStandardExample = () => {
+const TextFieldMaterialExample = ({variant ='standard'}) => {
    let inputSize = ['small', 'medium', 'large', 'largest', 'extra', 'extra-large'];
 
    let inputColors = [
@@ -15,7 +15,7 @@ const TextFieldMaterialStandardExample = () => {
 
                 label={`Form Input ${size.toUpperCase()}`}
                 size={size}
-                variant={'standard'}
+                variant={variant}
                 color={'inherit'}
                 id={`form-input-1111-${size}`}
                 placeholder={'Name'}
@@ -29,14 +29,14 @@ const TextFieldMaterialStandardExample = () => {
             <TextField
 
                 label={`Form Input ${color.toUpperCase()}`}
-                size={'medium'}
+                size={'large'}
                 color={color}
-                variant={'standard'}
+                variant={variant}
                 id={`form-input-1111-${color}`}
                 placeholder={'Name'}
                 type={'text'}
             />
-            <Button color={color} size={'medium'}>Submit</Button>
+            <Button color={color} size={'large'}>Submit</Button>
          </div>)}
 
       </div>
@@ -45,4 +45,7 @@ const TextFieldMaterialStandardExample = () => {
    </div>)
 }
 
-export default TextFieldMaterialStandardExample;
+TextFieldMaterialExample.defaultProps ={
+   variant:'standard'
+}
+export default TextFieldMaterialExample;

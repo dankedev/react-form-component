@@ -1,0 +1,20 @@
+&.fo-input-outlined {
+  @apply border rounded focus-within:border-red-600 ;
+  .fo-md-label{
+    @apply bg-transparent transition-all px-4;
+  }
+  .fo-input {
+    @apply px-4;
+    + .fo-md-label{
+
+      //@apply left-4;
+      //@apply translate-x-0 px-3 -translate-y-8;
+      //transform:translateX(15%) translateY(1%) scale(0.75);
+    }
+
+    &:focus + .fo-md-label,&:not(:placeholder-shown) + .fo-md-label{
+      @apply   bg-white inline-block  left-3 px-2 line-clamp-1;
+
+    }
+  }
+}

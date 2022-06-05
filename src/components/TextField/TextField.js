@@ -40,6 +40,7 @@ const TextField = ({
     let wrapClassName = [
         'fo-text-input',
         `fo-input-${inputVariant}`,
+       ['outlined', 'filled', 'standard'].includes(variant)?'fo-input-material':'',
         `fo-input-${color}`,
         inputSize
 
@@ -64,14 +65,14 @@ const TextField = ({
 
 
             {variant !== 'default' && <label htmlFor={`input-${id}`} className={`fo-md-label fo-input-label ${labelSize}`}>{label}</label>}
-            {variant === 'standard' && <div className={'fo-material-line'}/>}
+            {['standard','filled'].includes(variant) && <div className={'fo-material-line'}/>}
         </div>
         {helperText && <div className={'fo-input-helper-text'}>{helperText}</div>}
     </div>)
 }
 TextField.defaultProps = {
     variant: 'default',
-    size: 'medium',
+    size: 'large',
     color: 'blue',
     label: '',
     id: '',
@@ -83,7 +84,7 @@ TextField.defaultProps = {
 
 TextField.propTypes = {
     color: PropTypes.oneOf([
-       'eee', 'blue', 'light-blue', 'green', 'light-green', 'lime', 'red', 'pink', 'purple', 'deep-purple', 'teal', 'yellow', 'amber', 'orange', 'deep-orange'
+       'inherit', 'blue', 'light-blue', 'green', 'light-green', 'lime', 'red', 'pink', 'purple', 'deep-purple', 'teal', 'yellow', 'amber', 'orange', 'deep-orange'
     ]),
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
