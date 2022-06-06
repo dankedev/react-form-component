@@ -34,6 +34,11 @@ const Sidebar = () => {
     <nav className="flex flex-col gap-0">
       {components.map(item => <Link className={'block text-sm px-3 py-2 hover:bg-gray-100'} key={`sidebar-item-${item.label}`} to={item.link}>{item.label}</Link>)}
 
+
+    <div className={'font-bold px-3'}>Form Example</div>
+    <Link className={'block text-sm px-3 py-2 hover:bg-gray-100'} to={'/form'}>Contoh Form</Link>
+    <Link className={'block text-sm px-3 py-2 hover:bg-gray-100'} to={'/form-material'}>Contoh Form MD</Link>
+
     </nav>
   </div>)
 }

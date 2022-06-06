@@ -1,37 +1,40 @@
-&.fo-input-material{
-  .fo-md-label{
-    @apply absolute appearance-none select-none  line-clamp-1 max-w-full block;
-    transition: color .2s cubic-bezier(0,0,.2,1) 0ms,transform .2s cubic-bezier(0,0,.2,1) 0ms;
-    transform-origin: top left;
-
-  }
-  .fo-input{
-    @apply appearance-none bg-transparent w-full px-0 border-0 h-0;
-    &:focus  {
-      ~ .fo-material-line{
-        @apply border-b-transparent;
-        &:after{
-          @apply scale-100;
-        }
-      }
-
-      //label
-      + .fo-md-label{
-        @apply scale-75;
-        transform-origin: top left;
-      }
-    }
-  }
-  .fo-material-line{
-    @apply border-b border-gray-300 relative ;
-    transition: border-bottom-color ease-in-out,transform .2s cubic-bezier(0,0,.2,1) 0ms;
-    &:after{
-      content: " ";
-      @apply cursor-none absolute left-0 right-0 border-b-2 scale-0 ;
-      transition: transform .2s cubic-bezier(0,0,.2,1) 0ms;
-      bottom: 0;
-    }
-  }
-  @import "input-materia-standard-size";
-  @import "input-material-label-color";
-}
+//&.fo-input-material{
+//  .fo-md-label{
+//    @apply absolute appearance-none   line-clamp-1 max-w-full inline-flex select-none leading-none;
+//    transition: color .2s cubic-bezier(0,0,.2,1) 0ms,transform .2s cubic-bezier(0,0,.2,1) 0ms;
+//    transform-origin: top left;
+//
+//  }
+//
+//  .fo-input{
+//    @apply appearance-none border bg-transparent w-full px-0 border-0 h-0;
+//    &:focus  {
+//      ~ .fo-material-line{
+//        @apply border-b-transparent;
+//        &:after{
+//          @apply scale-100;
+//        }
+//      }
+//
+//      //label
+//      + .fo-md-label{
+//        @apply scale-75;
+//        transform-origin: top left;
+//      }
+//    }
+//  }
+//  .fo-material-line{
+//    @apply border-b border-gray-300 relative ;
+//    transition: border-bottom-color ease-in-out,transform .2s cubic-bezier(0,0,.2,1) 0ms;
+//    &:after{
+//      content: " ";
+//      @apply cursor-none absolute left-0 right-0 border-b-2 scale-0 ;
+//      transition: transform .2s cubic-bezier(0,0,.2,1) 0ms;
+//      bottom: 0;
+//    }
+//  }
+//
+//
+//  //@import "input-materia-standard-size";
+//  @import "input-material-label-color";
+//}

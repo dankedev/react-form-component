@@ -1,13 +1,20 @@
 .fo-input-label, .fo-md-label, input.fo-input {
-  @apply block text-gray-600;
+  @apply block text-gray-600 z-10 inline-flex;
 }
 
-@import "input-label-size";
-@import "text-field-wrap";
+.fo-input-wrap-default {
+  @apply space-y-3;
+  .fo-input-label {
+    @apply font-bold text-sm;
+  }
+}
+
+//@import "input-label-size";
+//@import "text-field-wrap";
 .fo-text-input {
-  @apply relative;
-  .fo-input{
-    @apply  border-0 outline-0 shadow-none drop-shadow-none appearance-none focus:outline-0 focus:border-0 focus:outline-offset-0 focus:shadow-none focus-visible:outline-0 focus-visible:border-0 focus-visible:outline-offset-0 focus-visible:shadow-none;
+  @apply relative w-full;
+  .fo-input {
+    @apply w-full relative z-20 border-0 outline-0 shadow-none drop-shadow-none appearance-none focus:outline-0 focus:border-0 focus:outline-offset-0 focus:shadow-none focus-visible:outline-0 focus-visible:border-0 focus-visible:outline-offset-0 focus-visible:shadow-none;
   }
 
   input,
@@ -42,21 +49,45 @@
   select {
     &.fo-input {
       @apply bg-transparent placeholder-gray-300;
-      &:focus-visible{
+      &:focus-visible {
         outline: none;
       }
     }
   }
 
 
-
-  @import "input-size";
+  //@import "input-size";
 
   @import "input-default";
-  @import "input-material";
-  @import "input-material-standard";
-  @import "input-material-outlined";
-  @import "input-material-filled";
+  //@import "input-material";
+
 }
 
 
+.fo-input-material {
+  @apply relative;
+  .fo-md-label {
+    @apply absolute transform appearance-none  top-0 left-0 line-clamp-1 max-w-full inline-flex origin-top-left;
+    transition: color .2s cubic-bezier(0, 0, .2, 1) 0ms, transform .2s cubic-bezier(0, 0, .2, 1) 0ms;
+
+  }
+
+}
+@import "input-material-standard";
+
+
+.fo-input-material.fo-input-standard.fo-input-material.fo-input-filled{
+    .fo-material-line{
+      @apply border-b border-gray-300 relative ;
+      transition: border-bottom-color ease-in-out,transform .2s cubic-bezier(0,0,.2,1) 0ms;
+      &:after{
+        content: " ";
+        @apply cursor-none absolute left-0 right-0 border-b-2 scale-0 ;
+        transition: transform .2s cubic-bezier(0,0,.2,1) 0ms;
+        bottom: 0;
+      }
+    }
+}
+
+@import "input-material-outlined";
+@import "input-material-filled";

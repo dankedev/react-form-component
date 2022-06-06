@@ -33,45 +33,37 @@
     }
   }
 
-  &.fo-button-sm {
-    @apply px-3 py-1 text-xs;
 
-  }
 
-  &.fo-button-md {
+  &.fo-button-small {
     @apply px-4 py-1.5 text-sm;
     &.fo-button-icon{
       @apply leading-none px-4 py-4;
     }
   }
 
-  &.fo-button-lg {
+  &.fo-button-normal {
     @apply px-5 py-2 text-base;
     &.fo-button-icon{
       @apply leading-none px-5 py-5 text-3xl;
     }
   }
 
-  &.fo-button-xl {
+  &.fo-button-large {
     @apply px-6 py-3 text-lg;
     &.fo-button-icon{
       @apply leading-none px-7 py-7 text-4xl ;
     }
   }
+  //
+  //&.fo-button-large {
+  //  @apply px-6 py-3 text-xl;
+  //  &.fo-button-icon{
+  //    @apply leading-none px-7 py-7 text-4xl ;
+  //  }
+  //}
 
-  &.fo-button-2xl {
-    @apply px-6 py-3 text-xl;
-    &.fo-button-icon{
-      @apply leading-none px-7 py-7 text-4xl ;
-    }
-  }
 
-  &.fo-button-3xl {
-    @apply px-10 py-5 text-2xl;
-    &.fo-button-icon{
-      @apply leading-none px-8 py-8 text-4xl ;
-    }
-  }
 
   @import "button-contained";
   @import "button-outlined";

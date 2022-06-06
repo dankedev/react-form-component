@@ -1,20 +1,129 @@
-&.fo-input-outlined {
-  @apply border rounded focus-within:border-red-600 ;
-  .fo-md-label{
-    @apply bg-transparent transition-all px-4;
+
+.fo-input-material.fo-input-outlined{
+  @apply border rounded-md focus-within:ring-1;
+
+  .fo-md-label {
+    @apply px-1 left-4;
   }
-  .fo-input {
-    @apply px-4;
-    + .fo-md-label{
 
-      //@apply left-4;
-      //@apply translate-x-0 px-3 -translate-y-8;
-      //transform:translateX(15%) translateY(1%) scale(0.75);
-    }
+  .fo-input{
+    &:focus,&:not(:placeholder-shown)   {
 
-    &:focus + .fo-md-label,&:not(:placeholder-shown) + .fo-md-label{
-      @apply   bg-white inline-block  left-3 px-2 line-clamp-1;
-
+      //label
+      + .fo-md-label{
+        @apply  bg-white;
+        transform-origin: top left;
+        transform: translateY(-0.5rem) translateX(-5px) scale(0.75);
+      }
     }
   }
+
+
+  &.fo-input-small{
+    @apply py-1.5 px-4;
+    .fo-md-label {
+      @apply text-sm;
+      transform: translateY(0.4rem) scale(1);
+    }
+  }
+
+  &.fo-input-normal{
+    @apply py-3 px-4;
+    .fo-md-label {
+      @apply text-base;
+      transform: translateY(0.75rem) scale(1);
+    }
+  }
+
+  &.fo-input-large{
+    @apply py-4 px-5;
+    .fo-md-label {
+      @apply text-base left-5;
+      transform: translateY(1rem) scale(1);
+    }
+  }
+
+
+
+
+
+  &.fo-input-inherit {
+    @apply focus-within:border-gray-500 focus-within:ring-gray-500;
+  }
+
+  &.fo-input-blue {
+    @apply focus-within:border-button-blue focus-within:ring-button-blue;
+  }
+
+  &.fo-input-light-blue {
+    @apply focus-within:border-button-light-blue focus-within:ring-button-light-blue;
+
+
+  }
+
+  &.fo-input-green {
+    @apply focus-within:border-button-green focus-within:ring-button-green;
+
+  }
+
+  &.fo-input-light-green {
+    @apply focus-within:border-button-light-green  focus-within:ring-button-light-green;
+
+  }
+
+  &.fo-input-lime {
+    @apply focus-within:border-button-lime  focus-within:ring-button-lime;
+
+  }
+
+  &.fo-input-red {
+    @apply focus-within:border-button-red  focus-within:ring-button-red;
+
+  }
+
+  &.fo-input-pink {
+    @apply focus-within:border-button-pink  focus-within:ring-button-pink;
+
+  }
+
+  &.fo-input-purple {
+    @apply focus-within:border-button-purple  focus-within:ring-button-purple;
+
+  }
+
+  &.fo-input-deep-purple {
+    @apply focus-within:border-button-deep-purple  focus-within:ring-button-deep-purple;
+
+  }
+
+  &.fo-input-teal {
+    @apply focus-within:border-button-teal  focus-within:ring-button-teal;
+
+  }
+
+  &.fo-input-yellow {
+    @apply focus-within:border-button-yellow  focus-within:ring-button-yellow;
+
+  }
+
+  &.fo-input-amber {
+    @apply focus-within:border-button-amber  focus-within:ring-button-amber;
+
+  }
+
+  &.fo-input-orange {
+    @apply focus-within:border-button-orange  focus-within:ring-button-orange;
+
+  }
+
+  &.fo-input-deep-orange {
+    @apply focus-within:border-button-deep-orange  focus-within:ring-button-deep-orange;
+
+  }
+
+
 }
+
+
+
+

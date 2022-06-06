@@ -29,6 +29,7 @@ const Button = forwardRef(({
         'fo-button',
         `fo-button-${variant}`,
         `fo-button-${color}`,
+        `fo-button-${size}`,
         noShadow ? `` : 'fo-has-shadow',
         iconOnly ? 'fo-button-icon' : '',
         rounded,
@@ -52,9 +53,9 @@ const Button = forwardRef(({
         size = 'fo-button-xl'
     }
 
-    let buttonSize = size.replace('small', 'fo-button-sm').replace('medium', 'fo-button-md').replace('extra-large', 'fo-button-3xl').replace('extra', 'fo-button-2xl')
+    // let buttonSize = size.replace('small', 'fo-button-sm').replace('medium', 'fo-button-md').replace('extra-large', 'fo-button-3xl').replace('extra', 'fo-button-2xl')
 
-    mainClassName.push(buttonSize)
+    // mainClassName.push(buttonSize)
 
     mainClassName = mainClassName.filter(i => i && typeof i !=="undefined");
 
@@ -83,7 +84,7 @@ const Button = forwardRef(({
 
 Button.defaultProps = {
     variant: 'contained',
-    size: 'medium',
+    size: 'normal',
     color: 'blue',
     disabled: false,
     noShadow: false,
@@ -101,7 +102,7 @@ Button.defaultProps = {
 Button.propTypes = {
     children: PropTypes.node,
     size: PropTypes.oneOf([
-        'small', 'medium', 'large', 'largest', 'extra', 'extra-large'
+        'small', 'normal', 'large'
     ]),
     variant: PropTypes.oneOf([
         'contained', 'outlined', 'text'

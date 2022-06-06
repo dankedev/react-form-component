@@ -1,4 +1,4 @@
-&.fo-input-default{
+&.fo-input-default {
   input,
   input[type="text"],
   input[type="email"],
@@ -30,106 +30,119 @@
   textarea,
   select {
     &.fo-input {
-      @apply border h-1 focus:ring;
+      @apply border h-0 focus:ring  rounded-md  align-middle leading-none;
+
     }
   }
-  .fo-input {
-    @apply  rounded-md  align-middle leading-none;
+
+
+  &.fo-input-small .fo-input{
+    @apply px-4 py-4 text-sm;
+  }
+  &.fo-input-normal .fo-input{
+    @apply px-5 py-5 text-base;
+  }
+
+  &.fo-input-large .fo-input{
+    @apply px-6 py-7 text-lg;
   }
 
   &.fo-input-inherit {
-    .fo-input{
-      @apply border-gray-300  focus:ring-gray-100;
-    }
-  }
-  &.fo-input-blue {
-    .fo-input{
-      @apply  border-button-blue focus:ring-blue-100;
+    .fo-input {
+      @apply border-gray-300   focus:ring-blue-200;
     }
   }
 
-  &.fo-input-light-blue{
-    .fo-input{
+  &.fo-input-blue {
+    .fo-input {
+      @apply border-button-blue focus:ring-blue-100;
+    }
+  }
+
+  &.fo-input-light-blue {
+    .fo-input {
       @apply border-button-light-blue focus:ring-blue-100;
     }
 
   }
 
-  &.fo-input-green{
-    .fo-input{
+  &.fo-input-green {
+    .fo-input {
       @apply border-button-green  focus:ring-green-100;
     }
   }
-  &.fo-input-light-green{
-    .fo-input{
+
+  &.fo-input-light-green {
+    .fo-input {
       @apply border-button-light-green focus:ring-green-50;
     }
   }
 
-  &.fo-input-lime{
-    .fo-input{
+  &.fo-input-lime {
+    .fo-input {
       @apply border-button-lime focus:ring-lime-100;
 
     }
   }
 
-  &.fo-input-red{
-    .fo-input{
+  &.fo-input-red {
+    .fo-input {
       @apply border-button-red  focus:ring-red-200;
 
     }
   }
 
-  &.fo-input-pink{
-    .fo-input{
+  &.fo-input-pink {
+    .fo-input {
       @apply border-button-pink focus:ring-pink-100;
 
     }
   }
 
-  &.fo-input-purple{
-    .fo-input{
+  &.fo-input-purple {
+    .fo-input {
       @apply border-button-purple focus:ring-purple-100;
 
     }
   }
 
-  &.fo-input-deep-purple{
-    .fo-input{
+  &.fo-input-deep-purple {
+    .fo-input {
       @apply border-button-deep-purple focus:ring-purple-200;
 
     }
   }
 
-  &.fo-input-teal{
-    .fo-input{
+  &.fo-input-teal {
+    .fo-input {
       @apply border-button-teal focus:ring-teal-100;
 
     }
   }
 
-  &.fo-input-yellow{
-    .fo-input{
+  &.fo-input-yellow {
+    .fo-input {
       @apply border-button-yellow focus:ring-yellow-100;
 
     }
   }
 
-  &.fo-input-amber{
-    .fo-input{
+  &.fo-input-amber {
+    .fo-input {
       @apply border-button-amber focus:ring-amber-100;
 
     }
   }
 
-  &.fo-input-orange{
-    .fo-input{
+  &.fo-input-orange {
+    .fo-input {
       @apply border-button-orange focus:ring-orange-100;
 
     }
   }
-  &.fo-input-deep-orange{
-    .fo-input{
+
+  &.fo-input-deep-orange {
+    .fo-input {
       @apply border-button-deep-orange focus:ring-orange-200;
 
     }

@@ -1,105 +1,117 @@
-import {createRef} from "react";
+import {createRef, forwardRef} from "react";
 import PropTypes from "prop-types";
+import TextareaAutosize from 'react-textarea-autosize';
 
-
-const TextField = ({
-                       variant,
-                       size,
-                       id,
-                       color,
-                       onChange,
-                       onBlur,
-                       label,
-                       autoFocus,
-                       helperText,
-                       fullWidth,
-                       inputRef,
-                       wrapRef,
-                       placeholder,
-                       error,
-                       disabled,
-                       ...others
-                   }) => {
+const TextField = forwardRef(({
+                                  variant,
+                                  size,
+                                  id,
+                                  color,
+                                  label,
+                                  helperText,
+                                  maxRows,
+                                  minRows,
+                                  fullWidth,
+                                  wrapRef,
+                                  placeholder,
+                                  error,
+                                  isRequired,
+                                  multiline,
+                                  disabled,
+                                  ...others
+                              }, inputRef) => {
 
     wrapRef = wrapRef ?? createRef();
     inputRef = inputRef ?? createRef();
 
     let inputVariant = ['default', 'outlined', 'filled', 'standard'].includes(variant) ? variant : 'default';
-   let labelSize = size.replace('small', 'fo-label-sm').replace('medium', 'fo-label-md').replace('extra-large', 'fo-label-3xl').replace('extra', 'fo-label-2xl')
-    if (size === 'large') {
-        size = 'fo-input-lg'
-        labelSize = 'fo-label-lg'
-    }
-    if (size === 'largest') {
-        size = 'fo-input-xl'
-        labelSize = 'fo-label-xl'
-    }
-
-    let inputSize = size.replace('small', 'fo-input-sm').replace('medium', 'fo-input-md').replace('extra-large', 'fo-input-3xl').replace('extra', 'fo-input-2xl')
+    let labelSize = size.replace('small', 'fo-label-sm').replace('medium', 'fo-label-md').replace('extra-large', 'fo-label-3xl').replace('extra', 'fo-label-2xl')
 
     let wrapClassName = [
         'fo-text-input',
         `fo-input-${inputVariant}`,
-       ['outlined', 'filled', 'standard'].includes(variant)?'fo-input-material':'',
+        ['outlined', 'filled', 'standard'].includes(variant) ? 'fo-input-material' : '',
         `fo-input-${color}`,
-        inputSize
+        `fo-input-${size}`,
 
     ];
 
     return (<div ref={wrapRef} id={`wrap-input-${id}`}
-                 className={`w-input-wrap ${inputSize} ${fullWidth ? 'w-full flex flex-col' : 'inline-flex flex-col '}`}>
+                 className={`fo-input-wrap fo-input-wrap-${variant} fo-input-wrap-${size} ${fullWidth ? 'w-full flex flex-col' : 'inline-flex flex-col '}`}>
 
-        {variant === 'default' && <label htmlFor={`input-${id}`} className={`fo-input-label ${label ==='' || !label  ?'sr-only hidden':''}  ${labelSize}`}>{label}</label>}
+        {variant === 'default' && <label htmlFor={`input-${id}`}
+                                         className={`fo-input-label space-x-1 ${label === '' || !label ? 'sr-only hidden' : ''}  ${labelSize}`}><span>{label}</span> {isRequired &&
+            <span className={'text-red-500 text-sm'}>*</span>}</label>}
 
         <div className={wrapClassName.join(' ')}
         >
-            <input
+
+            {multiline ? <TextareaAutosize
+                {...others}
                 ref={inputRef}
-                autoFocus={autoFocus}
+                id={`input-${id}`}
+                minRows={minRows}
+                minRows={minRows}
+                placeholder={variant === 'default' ? placeholder : ' '}
+                className={'fo-input'}
+
+            /> : <input
+                {...others}
+                ref={inputRef}
                 id={`input-${id}`}
                 placeholder={variant === 'default' ? placeholder : ' '}
                 className={'fo-input'}
-                {...others}
 
-            />
+            />}
 
 
-            {variant !== 'default' && <label htmlFor={`input-${id}`} className={`fo-md-label fo-input-label ${labelSize}`}>{label}</label>}
-            {['standard','filled'].includes(variant) && <div className={'fo-material-line'}/>}
+            {variant !== 'default' &&
+                <label htmlFor={`input-${id}`} className={`fo-md-label fo-input-label ${labelSize}`}>{label}</label>}
+            {['standard', 'filled'].includes(variant) && <div className={'fo-material-line'}/>}
         </div>
         {helperText && <div className={'fo-input-helper-text'}>{helperText}</div>}
     </div>)
-}
+})
 TextField.defaultProps = {
     variant: 'default',
     size: 'large',
     color: 'blue',
     label: '',
+    placeholder: '',
     id: '',
     helperText: '',
     autoFocus: false,
     error: 'false',
     fullWidth: false,
+    multiline: false,
+    isRequired: false,
+    minRows: 1,
+    maxRows: 10,
 }
 
 TextField.propTypes = {
     color: PropTypes.oneOf([
-       'inherit', 'blue', 'light-blue', 'green', 'light-green', 'lime', 'red', 'pink', 'purple', 'deep-purple', 'teal', 'yellow', 'amber', 'orange', 'deep-orange'
+        'inherit', 'blue', 'light-blue', 'green', 'light-green', 'lime', 'red', 'pink', 'purple', 'deep-purple', 'teal', 'yellow', 'amber', 'orange', 'deep-orange'
     ]),
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     label: PropTypes.string,
+    placeholder: PropTypes.string,
     id: PropTypes.string,
     autoFocus: PropTypes.bool,
     error: PropTypes.string,
     fullWidth: PropTypes.bool,
+    isRequired: PropTypes.bool,
+    multiline: PropTypes.bool,
     helperText: PropTypes.string,
     variant: PropTypes.oneOf([
         'default', 'outlined', 'filled', 'standard'
     ]),
     size: PropTypes.oneOf([
-        'small', 'medium', 'large', 'largest', 'extra', 'extra-large'
+        'small', 'normal', 'large'
     ]),
+    minRows: PropTypes.number,
+    maxRows: PropTypes.number,
 }
 
 export default TextField;

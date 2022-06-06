@@ -1,7 +1,7 @@
 import {Button} from "../components/Buttons";
 
 const ButtonExamples = () => {
-    const buttonSize = [  'small', 'medium', 'large', 'largest','extra','extra-large']
+    const buttonSize = [   'small', 'normal', 'large']
     const buttonColors = [ 'blue', 'light-blue','green','light-green','lime','red','pink','purple','deep-purple','teal','yellow','amber','orange','deep-orange']
 
     return(
@@ -23,26 +23,26 @@ const ButtonExamples = () => {
             <h3 className="font-bold">Contained Button</h3>
 
             <div className="flex gap-3 items-center flex-wrap">
-                {buttonColors.map(color => <Button key={`button-size-contained-color-${color}`} variant={'contained'} size={'medium'} color={color}>{color}</Button>)}
+                {buttonColors.map(color => <Button key={`button-size-contained-color-${color}`} variant={'contained'} size={'normal'} color={color}>{color}</Button>)}
             </div>
             <h3 className="font-bold">Outlined Button</h3>
 
             <div className="flex gap-3 items-center flex-wrap">
-                {buttonColors.map(color => <Button key={`button-size-contained-color-${color}`} variant={'outlined'} size={'medium'} color={color}>{color}</Button>)}
+                {buttonColors.map(color => <Button key={`button-size-contained-color-${color}`} variant={'outlined'} size={'normal'} color={color}>{color}</Button>)}
             </div>
 
             <h3 className="font-bold">Text Button</h3>
 
             <div className="flex gap-3 items-center flex-wrap">
-                {buttonColors.map(color => <Button key={`button-size-contained-color-${color}`} variant={'text'} size={'medium'} color={color}>{color}</Button>)}
+                {buttonColors.map(color => <Button key={`button-size-contained-color-${color}`} variant={'text'} size={'normal'} color={color}>{color}</Button>)}
             </div>
 
             <h3 className="font-bold">Disabled Button</h3>
             <div className="flex gap-3 items-center flex-wrap">
-                <Button disabled={true}>Disabled</Button>
-                <Button disabled={false} noShadow={true}>Enabled</Button>
+                <Button disabled={true} size={'small'}>Disabled</Button>
+                <Button disabled={false} noShadow={true} size={'normal'}>Enabled</Button>
                 <Button disabled={true} size={'large'} variant={'outlined'}>Disabled</Button>
-                <Button disabled={true} size={'medium'} variant={'text'}>Disabled</Button>
+                <Button disabled={true} size={'normal'} variant={'text'}>Disabled</Button>
             </div>
 
             <h3 className="font-bold">Full width</h3>

@@ -8,6 +8,8 @@ import {
 import ButtonIconExamples from "./examples/ButtonIconExamples";
 import TextFieldExample from "./examples/TextFieldExample";
 import TextFieldMaterialExample from "./examples/TextFieldMaterialExample";
+import FormExample from "./examples/FormExample";
+import FormMaterialExample from "./examples/FormMaterialExample";
 
 function App() {
     return (
@@ -22,6 +24,8 @@ function App() {
                             <Route path={'/text-field-md-default'} element={<TextFieldMaterialExample variant={'standard'}/>}/>
                             <Route path={'/text-field-md-outlined'} element={<TextFieldMaterialExample variant={'outlined'}/>}/>
                             <Route path={'/text-field-md-filled'} element={<TextFieldMaterialExample variant={'filled'}/>}/>
+                            <Route path={'/form'} element={<FormExample/>}/>
+                            <Route path={'/form-material'} element={<FormMaterialExample/>}/>
 
                         </Routes>
                 </div>
