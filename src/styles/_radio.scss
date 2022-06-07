@@ -1,0 +1,174 @@
+input[type="radio"].fo-radio-input {
+    @apply relative appearance-none  border-2 rounded-full border-gray-500 cursor-pointer transition-all   hover:before:opacity-10 before:transition-opacity  checked:border-blue-500 checked:before:bg-blue-500;
+    &:before {
+        @apply block transition-all ease-in-out absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  opacity-0 rounded-full;
+
+        content: " ";
+    }
+}
+
+.fo-radio {
+    .fo-mark-radio {
+        @apply opacity-0 scale-0  transform  absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none  transition-all text-gray-500;
+    }
+
+    &.fo-radio-small {
+        .fo-radio-input {
+            @apply w-4 h-4 before:w-8 before:h-8;
+        }
+        .fo-mark-radio {
+            @apply w-4 h-4;
+        }
+    }
+    &.fo-radio-normal {
+        .fo-radio-input {
+            @apply w-5 h-5 before:w-12 before:h-12;
+        }
+          .fo-mark-radio {
+            @apply w-5 h-5;
+        }
+    }
+    &.fo-radio-large {
+        .fo-radio-input {
+            @apply w-6 h-6 before:w-14 before:h-14;
+        }
+        .fo-mark-radio {
+            @apply  w-6 h-6;
+        }
+    }
+}
+
+.fo-radio-inherit {
+    input.fo-radio-input {
+        @apply checked:border-gray-400  checked:before:bg-gray-400;
+    }
+    .fo-mark-radio {
+        @apply text-gray-500;
+    }
+}
+
+.fo-radio-blue {
+    input.fo-radio-input {
+        @apply checked:border-button-blue  checked:before:bg-button-blue;
+    }
+    .fo-mark-radio {
+        @apply text-button-blue;
+    }
+}
+
+.fo-radio-light-blue {
+    input.fo-radio-input {
+        @apply checked:border-button-light-blue  checked:before:bg-button-light-blue;
+    }
+    .fo-mark-radio {
+        @apply text-button-light-blue;
+    }
+}
+
+.fo-radio-green {
+    input.fo-radio-input {
+        @apply checked:border-button-green  checked:before:bg-button-green;
+    }
+    .fo-mark-radio {
+        @apply text-button-green;
+    }
+}
+
+.fo-radio-light-green {
+    input.fo-radio-input {
+        @apply checked:border-button-light-green  checked:before:bg-button-light-green;
+    }
+    .fo-mark-radio {
+        @apply text-button-light-green;
+    }
+}
+
+.fo-radio-lime {
+    input.fo-radio-input {
+        @apply checked:border-button-lime  checked:before:bg-button-lime;
+    }
+    .fo-mark-radio {
+        @apply text-button-lime;
+    }
+}
+
+.fo-radio-red {
+    input.fo-radio-input {
+        @apply checked:border-button-red  checked:before:bg-button-red;
+    }
+    .fo-mark-radio {
+        @apply text-button-red;
+    }
+}
+
+.fo-radio-pink {
+    input.fo-radio-input {
+        @apply checked:border-button-pink  checked:before:bg-button-pink;
+    }
+    .fo-mark-radio {
+        @apply text-button-pink;
+    }
+}
+
+.fo-radio-purple {
+    input.fo-radio-input {
+        @apply checked:border-button-purple  checked:before:bg-button-purple;
+    }
+    .fo-mark-radio {
+        @apply text-button-purple;
+    }
+}
+
+.fo-radio-deep-purple {
+    input.fo-radio-input {
+        @apply checked:border-button-deep-purple  checked:before:bg-button-deep-purple;
+    }
+    .fo-mark-radio {
+        @apply text-button-deep-purple;
+    }
+}
+
+.fo-radio-teal {
+    input.fo-radio-input {
+        @apply checked:border-button-teal  checked:before:bg-button-teal;
+    }
+    .fo-mark-radio {
+        @apply text-button-teal;
+    }
+}
+
+.fo-radio-yellow {
+    input.fo-radio-input {
+        @apply checked:border-button-yellow  checked:before:bg-button-yellow;
+    }
+    .fo-mark-radio {
+        @apply text-button-yellow;
+    }
+}
+
+.fo-radio-amber {
+    input.fo-radio-input {
+        @apply checked:border-button-amber  checked:before:bg-button-amber;
+    }
+    .fo-mark-radio {
+        @apply text-button-amber;
+    }
+}
+
+.fo-radio-orange {
+    input.fo-radio-input {
+        @apply checked:border-button-orange  checked:before:bg-button-orange;
+    }
+    .fo-mark-radio {
+        @apply text-button-orange;
+    }
+}
+
+.fo-radio-deep-orange {
+    input.fo-radio-input {
+        @apply checked:border-button-deep-orange  checked:before:bg-button-deep-orange;
+    }
+    .fo-mark-radio {
+        @apply text-button-deep-orange;
+    }
+}

@@ -7,7 +7,8 @@ const FormExample = () => {
     const { register,control, handleSubmit, watch, formState: { errors } } = useForm({
         defaultValues:{
             myName:'hadi danker',
-            last_name:''
+            last_name:'',
+           
         }
     });
     const onSubmit = data => console.log(data);
@@ -95,6 +96,7 @@ const FormExample = () => {
                    <Controller
                         control={control}
                         name="pilihan"
+                        defaultChecked={true}
                         rules={{ required: true }}
                         render={({
                             field,
@@ -104,13 +106,16 @@ const FormExample = () => {
                                 {...field}
                                 {...fieldState}
                                 {...formState}
+                                checked={true}
                         id={`pilih-an`} label={`Pilih Yakin?`} />}
-                   /> 
+                   />  
+                  
                    
                     <Controller
                         control={control}
                         name="pilihan radio"
                         rules={{ required: true }}
+                        defaultChecked={true}
                         render={({
                             field,
                             fieldState,
@@ -119,6 +124,7 @@ const FormExample = () => {
                                 {...field}
                                 {...fieldState}
                                 {...formState}
+                                checked={field.value}
                         id={`pilih-an`} label={`Pilih Yakin?`} />}
                    />
                </form>

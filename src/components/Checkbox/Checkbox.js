@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import Ripple from '../components-helper/ripple';
 import PropTypes from "prop-types";
-
+import { propColors,propSize } from "../components-helper/variables";
 
 const CheckboxMark = () => <div className="fo-mark-checkbox peer-checked:opacity-100">
     <svg xmlns="http://www.w3.org/2000/svg" className="fo-mark-svg" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" strokeWidth="1">
@@ -10,14 +10,15 @@ const CheckboxMark = () => <div className="fo-mark-checkbox peer-checked:opacity
 </div>;
 
 
-const propSize = ['small', 'normal', 'large'];
-const propColors = ['inherit', 'blue', 'light-blue', 'green', 'light-green', 'lime', 'red', 'pink', 'purple', 'deep-purple', 'teal', 'yellow', 'amber', 'orange', 'deep-orange'];
+
 const Checkbox = forwardRef(({
     color,
     label,
     size,
     labelProps,
     disabled,
+    checked,
+    
     ...rest
 }, checkRef) => {
     const rippleEffect = new Ripple();
@@ -38,15 +39,17 @@ const Checkbox = forwardRef(({
         <label
             className={`fo-checkbox-label-wrap ${disabled ? `cursor-not-allowed` : `cursor-pointer`}`}
             htmlFor={rest.id || "checkbox"}
-            onMouseDown={(e) => !disabled && rippleEffect.create(e, 'blue')}
+            onMouseDown={(e) => !disabled && rippleEffect.create(e, color)}
         >
             <input
+                {...rest}
+                defaultChecked={checked}
                 ref={checkRef}
                 type="checkbox"
                 className={`peer fo-checkbox-input  ${disabled ? `cursor-not-allowed` : `cursor-pointer`}`}
                 id={rest.id || "checkbox"}
-                disabled={disabled}
-                {...rest}
+                disabled={disabled}             
+               
             />
             <CheckboxMark />
 
@@ -65,9 +68,10 @@ const Checkbox = forwardRef(({
 Checkbox.defaultProps = {
     color: 'blue',
     label: null,
-    size: 'default',
+    size: 'normal',
     labelProps: {},
     disabled: false,
+    checked: false,
 }
 
 Checkbox.propTypes = {
@@ -78,6 +82,7 @@ Checkbox.propTypes = {
     label: PropTypes.string,
     labelProps: PropTypes.instanceOf(Object),
     disabled: PropTypes.bool,
+    checked: PropTypes.bool,
 }
 
 

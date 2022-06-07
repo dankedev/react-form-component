@@ -1,9 +1,11 @@
-.fo-checkbox {
+.fo-checkbox,.fo-radio {
   @apply inline-flex items-center;
   .fo-checkbox-label-wrap {
     @apply relative overflow-hidden flex items-center p-3 rounded-full;
-  }
-  input.fo-checkbox-input {
+  }  
+}
+
+input[type=checkbox].fo-checkbox-input,input[type=radio].fo-radio-input {
     @apply relative appearance-none  before:bg-gray-500 before:block border-2 rounded-sm border-gray-400  transition-all  hover:before:opacity-10;
     &:before {
       @apply transition-opacity rounded-sm absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  opacity-0;
@@ -12,10 +14,9 @@
       display: block;
     }
   }
-}
 
 .fo-checkbox-label {
-  @apply text-gray-600 font-light select-none;
+  @apply text-gray-600 font-light select-none ;
 }
 
 .fo-mark-checkbox {
@@ -61,7 +62,7 @@
   }
 }
 
-.fo-checkbox-blue {
+.fo-checkbox-blue{
   input.fo-checkbox-input {
     @apply checked:bg-button-blue checked:border-button-blue  checked:before:bg-button-blue;
   }
