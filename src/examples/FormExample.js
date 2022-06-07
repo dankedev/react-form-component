@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm,Controller } from "react-hook-form";
-import {TextField} from "../components/TextField";
-import { Checkbox } from "../components/Checkbox";
+import { TextField,Checkbox ,Radio} from "../components";
 
 
 const FormExample = () => {
@@ -102,6 +101,21 @@ const FormExample = () => {
                             fieldState,
                             formState,
                         }) => <Checkbox
+                                {...field}
+                                {...fieldState}
+                                {...formState}
+                        id={`pilih-an`} label={`Pilih Yakin?`} />}
+                   /> 
+                   
+                    <Controller
+                        control={control}
+                        name="pilihan radio"
+                        rules={{ required: true }}
+                        render={({
+                            field,
+                            fieldState,
+                            formState,
+                        }) => <Radio
                                 {...field}
                                 {...fieldState}
                                 {...formState}
