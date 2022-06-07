@@ -33,8 +33,11 @@ const TextField = forwardRef(({
         ['outlined', 'filled', 'standard'].includes(variant) ? 'fo-input-material' : '',
         `fo-input-${color}`,
         `fo-input-${size}`,
+        multiline && 'fo-input-text-area'
 
     ];
+
+    wrapClassName = wrapClassName.filter(i => i !=='' && typeof i !=='undefined')
 
     return (<div ref={wrapRef} id={`wrap-input-${id}`}
                  className={`fo-input-wrap fo-input-wrap-${variant} fo-input-wrap-${size} ${fullWidth ? 'w-full flex flex-col' : 'inline-flex flex-col '}`}>
@@ -60,7 +63,7 @@ const TextField = forwardRef(({
                 ref={inputRef}
                 id={`input-${id}`}
                 placeholder={variant === 'default' ? placeholder : ' '}
-                className={'fo-input'}
+                className={'fo-input '}
 
             />}
 

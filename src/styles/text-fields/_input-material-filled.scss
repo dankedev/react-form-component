@@ -9,6 +9,7 @@
     &:focus, &:not(:placeholder-shown) {
       //label
       + .fo-md-label {
+        @apply text-gray-400;
         transform-origin: top left;
         transform: translateY(0.2rem) scale(0.75);
       }
@@ -42,8 +43,8 @@
     }
 
     .fo-md-label {
-      @apply text-sm;
-      transform: translateY(0.5rem) scale(1);
+      @apply text-xs;
+      transform: translateY(0.65rem) scale(1);
     }
 
 
@@ -57,11 +58,11 @@
     }
 
     .fo-input {
-      @apply pb-0.5 pt-6 px-4 text-base;
+      @apply pb-0.5 pt-5 px-4 text-base;
       &:focus, &:not(:placeholder-shown) {
 
         + .fo-md-label {
-          transform: translateY(0.5rem) scale(0.75);
+          transform: translateY(0.45rem) scale(0.75);
         }
       }
     }
@@ -76,11 +77,10 @@
     }
 
     .fo-input {
-      @apply pb-1 pt-8 px-4 text-xl;
-
+      @apply pb-1 pt-6 px-4 text-xl;
       &:focus, &:not(:placeholder-shown) {
         + .fo-md-label {
-          transform: translateY(0.5rem) scale(0.65);
+          transform: translateY(0.25rem) scale(0.65);
         }
       }
     }
@@ -100,7 +100,7 @@
         @apply border-b-gray-400;
       }
       + .fo-md-label {
-        @apply text-gray-500;
+        @apply text-gray-400;
       }
     }
   }
@@ -261,3 +261,9 @@
   }
 
 }
+
+
+
+
+
+

@@ -9,7 +9,8 @@ import ButtonIconExamples from "./examples/ButtonIconExamples";
 import TextFieldExample from "./examples/TextFieldExample";
 import TextFieldMaterialExample from "./examples/TextFieldMaterialExample";
 import FormExample from "./examples/FormExample";
-import FormMaterialExample from "./examples/FormMaterialExample";
+import SelectCheckboxRadio from "./examples/SelectCheckboxRadio";
+import MaterialFormExamples from "./examples/MaterialFormExamples";
 
 function App() {
     return (
@@ -21,11 +22,14 @@ function App() {
                             <Route path={'/buttons'} element={<ButtonExamples/>}/>
                             <Route path={'/buttons-icon'} element={<ButtonIconExamples/>}/>
                             <Route path={'/text-field'} element={<TextFieldExample/>}/>
-                            <Route path={'/text-field-md-default'} element={<TextFieldMaterialExample variant={'standard'}/>}/>
+                            <Route path={'/text-field-md-default'} element={<TextFieldMaterialExample variant={'default'}/>}/>
+                            <Route path={'/text-field-md-standard'} element={<TextFieldMaterialExample variant={'standard'}/>}/>
                             <Route path={'/text-field-md-outlined'} element={<TextFieldMaterialExample variant={'outlined'}/>}/>
                             <Route path={'/text-field-md-filled'} element={<TextFieldMaterialExample variant={'filled'}/>}/>
+                            <Route path={'/select'} element={<SelectCheckboxRadio />}/>
                             <Route path={'/form'} element={<FormExample/>}/>
-                            <Route path={'/form-material'} element={<FormMaterialExample/>}/>
+                            {/* <Route path={'/form-material'} element={<FormMaterialExample/>}/> */}
+                            <Route path={'/material-form'} element={<MaterialFormExamples/>}/>
 
                         </Routes>
                 </div>

@@ -1,0 +1,146 @@
+.fo-checkbox {
+  @apply inline-flex items-center;
+  .fo-checkbox-label-wrap {
+    @apply relative overflow-hidden flex items-center p-3 rounded-full;
+  }
+  input.fo-checkbox-input {
+    @apply relative appearance-none  before:bg-gray-500 before:block border-2 rounded-sm border-gray-400  transition-all  hover:before:opacity-10;
+    &:before {
+      @apply transition-opacity rounded-sm absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2  opacity-0;
+      content: "";
+      //before:block before:bg-blue-grey-500 before:w-12 before:h-12 before:rounded-full before:absolute before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2
+      display: block;
+    }
+  }
+}
+
+.fo-checkbox-label {
+  @apply text-gray-600 font-light select-none;
+}
+
+.fo-mark-checkbox {
+  @apply text-white absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none  opacity-0  transition-opacity;
+  > .fo-mark-svg {
+    @apply h-3.5 w-3.5 fill-current text-white;
+  }
+}
+
+.fo-checkbox.fo-checkbox-small {
+  .fo-checkbox-label-wrap {
+    @apply p-2.5;
+    input.fo-checkbox-input {
+      @apply w-4 h-4 before:w-10 before:h-10;
+    }
+  }
+  .fo-checkbox-label {
+    @apply text-sm;
+  }
+}
+
+.fo-checkbox.fo-checkbox-normal {
+  .fo-checkbox-label-wrap {
+    @apply p-3;
+    input.fo-checkbox-input {
+      @apply w-5 h-5 before:w-12 before:h-12;
+    }
+  }
+}
+
+.fo-checkbox.fo-checkbox-large {
+  .fo-checkbox-label-wrap {
+    @apply p-3.5;
+    input.fo-checkbox-input {
+      @apply w-6 h-6 before:w-14 before:h-14;
+    }
+  }
+}
+
+.fo-checkbox-inherit {
+  input.fo-checkbox-input {
+    @apply checked:bg-gray-400 checked:border-gray-400  checked:before:bg-gray-400;
+  }
+}
+
+.fo-checkbox-blue {
+  input.fo-checkbox-input {
+    @apply checked:bg-button-blue checked:border-button-blue  checked:before:bg-button-blue;
+  }
+}
+
+.fo-checkbox-light-blue {
+  input.fo-checkbox-input {
+    @apply checked:bg-button-light-blue checked:border-button-light-blue  checked:before:bg-button-light-blue;
+  }
+}
+
+.fo-checkbox-green {
+  input.fo-checkbox-input {
+    @apply checked:bg-button-green checked:border-button-green  checked:before:bg-button-green;
+  }
+}
+
+.fo-checkbox-light-green {
+  input.fo-checkbox-input {
+    @apply checked:bg-button-light-green checked:border-button-light-green  checked:before:bg-button-light-green;
+  }
+}
+
+.fo-checkbox-lime {
+  input.fo-checkbox-input {
+    @apply checked:bg-button-lime checked:border-button-lime  checked:before:bg-button-lime;
+  }
+}
+
+.fo-checkbox-red {
+  input.fo-checkbox-input {
+    @apply checked:bg-button-red checked:border-button-red  checked:before:bg-button-red;
+  }
+}
+
+.fo-checkbox-pink {
+  input.fo-checkbox-input {
+    @apply checked:bg-button-pink checked:border-button-pink  checked:before:bg-button-pink;
+  }
+}
+
+.fo-checkbox-purple {
+   input.fo-checkbox-input {
+    @apply checked:bg-button-purple checked:border-button-purple  checked:before:bg-button-purple;
+  }
+}
+
+.fo-checkbox-deep-purple {
+    input.fo-checkbox-input {
+    @apply checked:bg-button-deep-purple checked:border-button-deep-purple  checked:before:bg-button-deep-purple;
+  }
+}
+
+.fo-checkbox-teal {
+    input.fo-checkbox-input {
+    @apply checked:bg-button-teal checked:border-button-teal  checked:before:bg-button-teal;
+  }
+}
+
+.fo-checkbox-yellow {
+    input.fo-checkbox-input {
+    @apply checked:bg-button-yellow checked:border-button-yellow  checked:before:bg-button-yellow;
+  }
+}
+
+.fo-checkbox-amber {
+    input.fo-checkbox-input {
+    @apply checked:bg-button-amber checked:border-button-amber  checked:before:bg-button-amber;
+  }
+}
+
+.fo-checkbox-orange {
+    input.fo-checkbox-input {
+    @apply checked:bg-button-orange checked:border-button-orange  checked:before:bg-button-orange;
+  }
+}
+
+.fo-checkbox-deep-orange {
+    input.fo-checkbox-input {
+    @apply checked:bg-button-deep-orange checked:border-button-deep-orange  checked:before:bg-button-deep-orange;
+  }
+}

@@ -35,6 +35,7 @@ const TextFieldExample = () => {
                     color={color}
                     id={`form-input-1111-${color}`}
                     placeholder={'Name'}
+                    variant={'default'}
                     type={'text'}
                     isRequired={true}
                 />

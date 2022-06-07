@@ -36,15 +36,22 @@
   }
 
 
+
+
   &.fo-input-small .fo-input{
     @apply px-4 py-4 text-sm;
+
   }
+
+
   &.fo-input-normal .fo-input{
     @apply px-5 py-5 text-base;
+
   }
 
   &.fo-input-large .fo-input{
     @apply px-6 py-7 text-lg;
+
   }
 
   &.fo-input-inherit {

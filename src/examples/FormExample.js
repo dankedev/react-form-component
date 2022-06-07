@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm,Controller } from "react-hook-form";
 import {TextField} from "../components/TextField";
+import { Checkbox } from "../components/Checkbox";
 
 
 const FormExample = () => {
@@ -31,10 +32,10 @@ const FormExample = () => {
                                 })  =>  <TextField
 
                            label={`Nama Depan`}
-                           size={'largest'}
+                           size={'large'}
                            color={'inherit'}
                            fullWidth={true}
-
+                           variant={'outlined'}
                            {...field}
                            {...fieldState}
                            {...formState}
@@ -54,10 +55,10 @@ const FormExample = () => {
                                 })  =>  <TextField
 
                            label={`Nama Akhir`}
-                           size={'largest'}
+                           size={'large'}
                            color={'inherit'}
                            fullWidth={true}
-
+                           variant={'outlined'}
                            {...field}
                            {...fieldState}
                            {...formState}
@@ -78,8 +79,9 @@ const FormExample = () => {
                                   })  =>  <TextField
 
                              label={`Alamat tinggal`}
-                             size={'largest'}
-                             color={'inherit'}
+                             size={'normal'}
+                             color={'green'}
+                             variant={'outlined'}
                              fullWidth={true}
                              multiline={true}
                              {...field}
@@ -91,7 +93,20 @@ const FormExample = () => {
                          />}
                      />
                  </div>
-
+                   <Controller
+                        control={control}
+                        name="pilihan"
+                        rules={{ required: true }}
+                        render={({
+                            field,
+                            fieldState,
+                            formState,
+                        }) => <Checkbox
+                                {...field}
+                                {...fieldState}
+                                {...formState}
+                        id={`pilih-an`} label={`Pilih Yakin?`} />}
+                   />
                </form>
                {JSON.stringify(values)}
            </div>

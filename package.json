@@ -8,10 +8,15 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "classnames": "^2.3.1",
+    "deepmerge": "^4.2.2",
+    "downshift": "^6.1.7",
+    "framer-motion": "^6.3.10",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-hook-form": "^7.31.3",
+    "react-merge-refs": "^1.1.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-textarea-autosize": "^8.3.4",
@@ -42,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@material-tailwind/react": "^1.0.3",
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
     "autoprefixer": "^10.4.7",
