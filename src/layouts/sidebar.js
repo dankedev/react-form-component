@@ -29,7 +29,11 @@ const Sidebar = () => {
       link:'/text-field-md-filled'
     },
     {
-      label:'Selection',
+      label:'Cehckbox Radio',
+      link:'/checkbox-radio'
+    },
+     {
+      label:'Select',
       link:'/select'
     },
     {

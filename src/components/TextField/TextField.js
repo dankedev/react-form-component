@@ -77,7 +77,7 @@ const TextField = forwardRef(({
 })
 TextField.defaultProps = {
     variant: 'default',
-    size: 'large',
+    size: 'normal',
     color: 'blue',
     label: '',
     placeholder: '',

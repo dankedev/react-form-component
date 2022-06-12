@@ -14,7 +14,8 @@ const Icon = forwardRef(({name, variant, size, color, className, ...res}, iconRe
     let iconClassName = [
         'fo-icon',
         variant ==='outlined' ?'material-icons-outlined':'material-icons',
-        iconSize
+        iconSize,
+        className
     ];
 
     return (<span {...res} className={iconClassName.join(' ')}>{name}</span>)
