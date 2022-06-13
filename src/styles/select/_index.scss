@@ -1,0 +1,23 @@
+.fo-select {
+  @apply relative w-full;
+  min-width: 200px;
+  //> label.fo-select-label{
+  //  @apply flex w-full h-full select-none pointer-events-none absolute left-0 font-normal transition-all;
+  //}
+  //> button.fo-select-btn{
+  //  @apply w-full h-full font-sans rounded-md disabled:bg-gray-50 disabled:border-0 transition-all;
+  //}
+  //&-small {
+  //  @apply h-11;
+  //}
+  //
+  //
+  //&-large {
+  //  @apply h-16;
+  //  //> button.fo-select-btn {
+  //  //  @apply text-lg;
+  //  //}
+  //}
+  //
+  //@import "select-outlined";
+}

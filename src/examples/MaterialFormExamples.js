@@ -1,14 +1,11 @@
-import React from "react";
-import {Checkbox} from "@material-tailwind/react"
+import React from 'react';
 
-const MaterialFormExamples = () =>{
-
-
-    return(<div>
-        <form>
-            sss
-        </form>
-    </div>)
-}
+const MaterialFormExamples = () => {
+  return (
+    <div>
+      <form>sss</form>
+    </div>
+  );
+};
 
 export default MaterialFormExamples;

@@ -1,0 +1,5 @@
+&.fo-select-outlined{
+  .fo-select-btn{
+    @apply border focus:border-2;
+  }
+}

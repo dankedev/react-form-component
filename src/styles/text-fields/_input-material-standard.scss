@@ -6,7 +6,7 @@
 
 .fo-input-material.fo-input-standard {
   .fo-input {
-    @apply border-0 h-0;
+    @apply border-0;
     &:focus, &:not(:placeholder-shown) {
       + .fo-md-label {
         transform: translateY(-1rem) scale(.75);

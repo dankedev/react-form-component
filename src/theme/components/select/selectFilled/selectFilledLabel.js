@@ -1,5 +1,5 @@
-const selectOutlinedLabel = {
-  position: '-top-1.5',
+const selectFilledLabel = {
+  position: '-bottom-1.5',
   before: {
     content: "before:content[' ']",
     display: 'before:block',
@@ -18,8 +18,7 @@ const selectOutlinedLabel = {
     display: 'after:block',
     flexGrow: 'after:flex-grow',
     boxSizing: 'after:box-border',
-    width: 'after:w-2.5',
-    height: 'after:h-1.5',
+
     mt: 'after:mt-[6.5px]',
     ml: 'after:ml-1',
     borderRadius: 'after:rounded-tr-md',
@@ -29,4 +28,4 @@ const selectOutlinedLabel = {
   }
 };
 
-export default selectOutlinedLabel;
+export default selectFilledLabel;

@@ -1,6 +1,6 @@
 
 .fo-input-material.fo-input-outlined{
-  @apply border rounded-md focus-within:ring-1;
+  @apply border rounded-md focus-within:ring-1 flex items-center;
 
   .fo-md-label {
     @apply px-1 left-4;
@@ -8,7 +8,6 @@
 
   .fo-input{
     &:focus,&:not(:placeholder-shown)   {
-
       //label
       + .fo-md-label{
         @apply  bg-white;
@@ -20,23 +19,30 @@
 
 
   &.fo-input-small{
-    @apply py-1.5 px-4;
+    //@apply py-0 px-4 ;
     .fo-md-label {
       @apply text-sm;
-      transform: translateY(0.4rem) scale(1);
+      transform: translateY(0.35rem) scale(1);
     }
   }
 
   &.fo-input-normal{
-    @apply py-3 px-4;
+    //@apply py-0 px-0;
+    input.fo-input{
+      //@apply px-3;
+    }
     .fo-md-label {
       @apply text-base;
-      transform: translateY(0.75rem) scale(1);
+      transform: translateY(.55rem) scale(1);
     }
   }
 
   &.fo-input-large{
-    @apply py-4 px-5;
+    //@apply py-4 px-5;
+    //@apply py-0  ;
+    input.fo-input{
+      //@apply px-5;
+    }
     .fo-md-label {
       @apply text-base left-5;
       transform: translateY(1rem) scale(1);

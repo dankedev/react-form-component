@@ -1,11 +1,13 @@
-import selectOutlinedLabel from './selectOutlinedLabel';
-import selectOutlinedColors from './selectOutlinedColors';
-import selectOutlinedLabelColors from './selectOutlinedLabelColors';
-
-const selectOutlined = {
+import selectOutlinedColors from '../selectOutlined/selectOutlinedColors';
+import selectOutlinedLabelColors from '../selectOutlined/selectOutlinedLabelColors';
+import selectFilledLabel from './selectFilledLabel';
+const selectFilled = {
   base: {
-    select: {},
-    label: selectOutlinedLabel
+    select: {
+      bg: 'bg-gray-200',
+      pt: 'pt-0'
+    },
+    label: selectFilledLabel
   },
   sizes: {
     small: {
@@ -38,7 +40,7 @@ const selectOutlined = {
         height: 'h-12'
       },
       select: {
-        fontSize: 'text-base',
+        fontSize: 'text-lg',
         px: 'px-3',
         py: 'py-3',
         borderRadius: 'rounded-[7px]'
@@ -66,8 +68,9 @@ const selectOutlined = {
       },
       select: {
         px: 'px-3',
-        py: 'py-3',
-        borderRadius: 'rounded-[7px]'
+
+        border: 'border-0 border-b',
+        borderRadius: 'rounded-t-[7px]'
       },
       label: {
         initial: {},
@@ -98,7 +101,7 @@ const selectOutlined = {
   states: {
     close: {
       select: {
-        borderWidth: 'border'
+        borderWidth: 'border-0'
       },
       label: {
         fontSize: 'text-sm',
@@ -115,19 +118,19 @@ const selectOutlined = {
     },
     open: {
       select: {
-        borderWidth: 'border-2',
+        borderWidth: 'border-b-2',
         borderColor: 'border-t-transparent'
       },
       label: {
         fontSize: 'text-[11px]',
         disabled: 'peer-disabled:text-transparent',
         before: {
-          bt: 'before:border-t-2',
-          bl: 'before:border-l-2'
+          bt: 'before:border-t-0',
+          bl: 'before:border-l-0'
         },
         after: {
-          bt: 'after:border-t-2',
-          br: 'after:border-r-2'
+          bt: 'after:border-t-0',
+          br: 'after:border-r-0'
         }
       }
     },
@@ -140,12 +143,12 @@ const selectOutlined = {
         fontSize: 'text-[11px]',
         disabled: 'peer-disabled:text-transparent',
         before: {
-          bt: 'before:border-t',
-          bl: 'before:border-l'
+          bt: 'before:border-t-0',
+          bl: 'before:border-l-0'
         },
         after: {
-          bt: 'after:border-t',
-          br: 'after:border-r'
+          bt: 'after:border-t-0',
+          br: 'after:border-r-0'
         }
       }
     }
@@ -228,4 +231,4 @@ const selectOutlined = {
   }
 };
 
-export default selectOutlined;
+export default selectFilled;

@@ -1,5 +1,5 @@
 .fo-input-label, .fo-md-label, input.fo-input {
-  @apply block text-gray-600 z-10 inline-flex;
+  @apply block text-gray-600 ;
 }
 
 .fo-input-wrap-default {
@@ -13,9 +13,9 @@
 //@import "text-field-wrap";
 .fo-text-input {
   @apply relative w-full;
-  .fo-input {
-    @apply w-full relative z-20 border-0 outline-0 shadow-none drop-shadow-none appearance-none focus:outline-0 focus:border-0 focus:outline-offset-0 focus:shadow-none focus-visible:outline-0 focus-visible:border-0 focus-visible:outline-offset-0 focus-visible:shadow-none;
-  }
+  //.fo-input {
+  //  @apply w-full relative z-20 border-0 outline-0 h-full shadow-none drop-shadow-none appearance-none focus:outline-0 focus:border-0 focus:outline-offset-0 focus:shadow-none focus-visible:outline-0 focus-visible:border-0 focus-visible:outline-offset-0 focus-visible:shadow-none;
+  //}
 
   input,
   input[type="text"],
@@ -48,14 +48,40 @@
   textarea,
   select {
     &.fo-input {
-      @apply bg-transparent placeholder-gray-300;
+      @apply bg-transparent  align-middle leading-none placeholder-gray-300 w-full relative z-20 border-0 outline-0 h-full shadow-none drop-shadow-none appearance-none focus:outline-0 focus:border-0 focus:outline-offset-0 focus:shadow-none focus-visible:outline-0 focus-visible:border-0 focus-visible:outline-offset-0 focus-visible:shadow-none;
+
       &:focus-visible {
         outline: none;
       }
     }
   }
 
+  &.fo-input-small{
+    //height: 1.4375em;
+    //padding: 8.5px 14px;
+    input,textarea{
+      &.fo-input{
+        @apply px-4 py-6 text-sm h-2;
+      }
+    }
+  }
 
+
+  &.fo-input-normal {
+    input,textarea{
+      &.fo-input{
+        @apply text-base h-11 px-4 py-6;
+      }
+    }
+  }
+
+  &.fo-input-large {
+    input,textarea{
+      &.fo-input{
+        @apply text-lg h-14 px-4 py-6;
+      }
+    }
+  }
   //@import "input-size";
 
   @import "input-default";

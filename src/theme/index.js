@@ -1,7 +1,7 @@
-import select from "./components/select"
+import select from './components/select';
 
 const theme = {
-    select
-}
+  select
+};
 
 export default theme;
