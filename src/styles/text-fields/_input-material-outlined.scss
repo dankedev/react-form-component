@@ -12,7 +12,7 @@
       + .fo-md-label{
         @apply  bg-white;
         transform-origin: top left;
-        transform: translateY(-0.5rem) translateX(-5px) scale(0.75);
+        transform: translateY(-0.65rem) translateX(-5px) scale(0.75);
       }
     }
   }
@@ -27,10 +27,7 @@
   }
 
   &.fo-input-normal{
-    //@apply py-0 px-0;
-    input.fo-input{
-      //@apply px-3;
-    }
+
     .fo-md-label {
       @apply text-base;
       transform: translateY(.55rem) scale(1);
@@ -38,14 +35,10 @@
   }
 
   &.fo-input-large{
-    //@apply py-4 px-5;
-    //@apply py-0  ;
-    input.fo-input{
-      //@apply px-5;
-    }
+
     .fo-md-label {
-      @apply text-base left-5;
-      transform: translateY(1rem) scale(1);
+      @apply text-lg ;
+      transform: translateY(0.85rem) scale(1);
     }
   }
 

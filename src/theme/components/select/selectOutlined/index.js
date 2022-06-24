@@ -75,7 +75,7 @@ const selectOutlined = {
           close: {
             label: {
               lineHeight: 'leading-[4.6]',
-              pl: 'pl-2',
+              pl: 'pl-3',
               fontSize: 'text-base'
             }
           },

@@ -29,8 +29,9 @@ const FormExample = () => {
   return (
     <div className={'space-y-8 mb-20 min-h-screen w-full bg-gray-50 py-20'}>
       <div className="w-full bg-white rounded-md shadow-md drop-shadow-2xl mx-auto max-w-4xl px-6 py-8">
-        <h1 className="font-bold text-center">Form Order</h1>
-
+        <h1 className="font-bold text-center">
+          Form Order xxx {typeof Controller} -- and {typeof control}
+        </h1>
         <div className="form-content px-6">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="space-y-8">

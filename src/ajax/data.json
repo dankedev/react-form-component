@@ -1,0 +1,769 @@
+{
+  "title": "form Baru With Wizard2",
+  "description": "",
+  "ID": 367,
+  "slug": "form-baru-with-wizard2",
+  "status": true,
+  "post_date": "16 Apr 2022",
+  "shipping_method": "local",
+  "shipping": {},
+  "fields": [
+    {
+      "key": "name",
+      "label": "Nama Lengkap",
+      "required": true,
+      "enabled": true,
+      "editable": true,
+      "errorMessage": "Nama harus diisi",
+      "default": "",
+      "fieldType": "name",
+      "type": "text",
+      "fields": [
+        {
+          "key": "first_name",
+          "label": "Nama depan",
+          "type": "text",
+          "fieldType": "input",
+          "default": "",
+          "required": true,
+          "enabled": true,
+          "placeholder": "Nama Depan"
+        },
+        {
+          "key": "last_name",
+          "label": "Nama akhir",
+          "type": "text",
+          "default": "",
+          "fieldType": "input",
+          "required": true,
+          "enabled": true,
+          "placeholder": "Nama Belakang"
+        }
+      ],
+      "helper": ""
+    },
+    {
+      "key": "phone",
+      "label": "No Handphone \/ Whatsapp",
+      "placeholder": "No. WhatsApp Anda",
+      "required": true,
+      "enabled": true,
+      "editable": true,
+      "default": "",
+      "fieldType": "input",
+      "type": "phone",
+      "helper": "",
+      "errorMessage": "",
+      "hidden": false
+    },
+    {
+      "key": "address",
+      "label": "Alamat lengkap",
+      "placeholder": "Alamat Lengkap",
+      "required": false,
+      "enabled": true,
+      "editable": true,
+      "default": "",
+      "fieldType": "address",
+      "type": "text",
+      "fields": [
+        {
+          "key": "full_address",
+          "label": "Alamat lengkap",
+          "placeholder": "Alamat lengkap",
+          "error_message": "",
+          "default": "",
+          "editable": true,
+          "enabled": true,
+          "type": "textarea",
+          "options": [
+            "label",
+            "default"
+          ]
+        },
+        {
+          "key": "city",
+          "label": "Kota\/Kecamatan",
+          "placeholder": "Kota \/ Kecamatan",
+          "required": true,
+          "enabled": true,
+          "editable": false,
+          "default": "",
+          "fieldType": "select",
+          "type": "city"
+        }
+      ]
+    },
+    {
+      "key": "hslo_dini_fiekekqq",
+      "label": "Hslo dini fiekekqq",
+      "placeholder": "",
+      "required": false,
+      "enabled": true,
+      "editable": true,
+      "default": "",
+      "fieldType": "single_checkbox",
+      "type": "single_checkbox",
+      "customField": true,
+      "helper": "kkaksdas",
+      "errorMessage": "asdkasdksad"
+    },
+    {
+      "key": false,
+      "label": "",
+      "placeholder": "",
+      "required": true,
+      "enabled": true,
+      "editable": true,
+      "default": "",
+      "fieldType": "checkboxes",
+      "type": "checkboxes",
+      "customField": true,
+      "helper": "",
+      "errorMessage": ""
+    },
+    {
+      "key": false,
+      "label": "",
+      "placeholder": "",
+      "required": true,
+      "enabled": true,
+      "editable": true,
+      "default": "",
+      "fieldType": "checkboxes",
+      "type": "checkboxes",
+      "customField": true,
+      "helper": "",
+      "errorMessage": ""
+    }
+  ],
+  "settings": {
+    "title": "form Baru With Wizard Yang Ada",
+    "ID": 367,
+    "slug": "form-baru-with-wizard",
+    "status": true,
+    "post_date": "16 Apr 2022",
+    "shipping_method": "local",
+    "shipping": {
+      "origin": {
+        "value": 4471,
+        "label": "Baturaja Barat, Ogan Komering Ulu - Sumatera Selatan"
+      },
+      "method": "courier",
+      "couriers": [
+        {
+          "jne": [
+            "oke"
+          ]
+        },
+        {
+          "pos": false
+        },
+        {
+          "tiki": false
+        },
+        {
+          "anteraja": false
+        },
+        {
+          "jnt": false
+        },
+        {
+          "sicepat": false
+        },
+        {
+          "ninja": false
+        },
+        {
+          "jet": false
+        },
+        {
+          "wahana": false
+        },
+        {
+          "rex": false
+        },
+        {
+          "rpx": false
+        },
+        {
+          "lion": false
+        }
+      ],
+      "flat_cost": 0,
+      "pickup": {
+        "active": false,
+        "label": "Ambil di toko"
+      }
+    },
+    "fields": [],
+    "settings": [],
+    "pixels": [],
+    "form_type": "",
+    "products": [],
+    "_wp_order_form_products": [],
+    "pickup": {
+      "active": false
+    },
+    "notification": {
+      "admin": {
+        "email": {
+          "active": false,
+          "email": "",
+          "subject": "",
+          "message": ""
+        },
+        "telegram": {
+          "active": false,
+          "channel": "",
+          "message": ""
+        },
+        "whatsapp": {
+          "active": false,
+          "number": "",
+          "message": ""
+        }
+      },
+      "customer": {
+        "email": {
+          "active": false,
+          "subject": "",
+          "message": ""
+        },
+        "whatsapp": {
+          "active": false,
+          "message": ""
+        }
+      }
+    },
+    "integration": {
+      "slack": [],
+      "google_sheet": [],
+      "microsoft_excel": [],
+      "google_ads": [],
+      "google_analytics": [],
+      "facebook_event": [],
+      "tiktok_event": [],
+      "mailchimp": [],
+      "kirim_email": [],
+      "webhook": []
+    },
+    "payment": {
+      "bank": {
+        "active": false,
+        "banks": []
+      },
+      "unique_code": {
+        "active": false,
+        "min": 0,
+        "max": 9999
+      },
+      "epayment": {
+        "active": false,
+        "selected": null
+      }
+    },
+    "input_style": "outline",
+    "thankyou": {
+      "active": false,
+      "title": "",
+      "content": "",
+      "redirect": false,
+      "redirect_url": ""
+    },
+    "template": "left_sidebar"
+  },
+  "pixels": {},
+  "form_type": "",
+  "products": [
+    {
+      "name": "Produk Baru Lagi",
+      "ID": 275,
+      "post_date": "2022-02-17 12:30:35",
+      "status": "publish",
+      "formatted_date": "February 17, 2022",
+      "regular_price": 60000,
+      "has_sale_price": false,
+      "sale_price": 0,
+      "weight": 0,
+      "enable_volume": false,
+      "volume_width": 0,
+      "volume_height": 0,
+      "volume_length": 0,
+      "product_type": "psychical",
+      "image_ids": [
+        81,
+        76
+      ],
+      "product_images": [
+        {
+          "id": 81,
+          "title": "connection",
+          "filename": "connection.png",
+          "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/connection.png",
+          "link": "http:\/\/wp.test\/connection\/",
+          "alt": "",
+          "author": "1",
+          "description": "",
+          "caption": "",
+          "name": "connection",
+          "status": "inherit",
+          "uploadedTo": 0,
+          "date": 1639162186000,
+          "modified": 1639162186000,
+          "menuOrder": 0,
+          "mime": "image\/png",
+          "type": "image",
+          "subtype": "png",
+          "icon": "http:\/\/wp.test\/wp-includes\/images\/media\/default.png",
+          "dateFormatted": "December 10, 2021",
+          "nonces": {
+            "update": "0c6f61dad1",
+            "delete": "3ab2b54fa4",
+            "edit": "be5ad6b70b"
+          },
+          "editLink": "http:\/\/wp.test\/wp-admin\/post.php?post=81&action=edit",
+          "meta": false,
+          "authorName": "admin",
+          "authorLink": "http:\/\/wp.test\/wp-admin\/profile.php",
+          "filesizeInBytes": 15184,
+          "filesizeHumanReadable": "15 KB",
+          "context": "",
+          "height": 512,
+          "width": 512,
+          "orientation": "landscape",
+          "sizes": {
+            "thumbnail": {
+              "height": 150,
+              "width": 150,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/connection-150x150.png",
+              "orientation": "landscape"
+            },
+            "medium": {
+              "height": 300,
+              "width": 300,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/connection-300x300.png",
+              "orientation": "landscape"
+            },
+            "full": {
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/connection.png",
+              "height": 512,
+              "width": 512,
+              "orientation": "landscape"
+            }
+          }
+        },
+        {
+          "id": 76,
+          "title": "link",
+          "filename": "link.png",
+          "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/link.png",
+          "link": "http:\/\/wp.test\/link\/",
+          "alt": "",
+          "author": "1",
+          "description": "",
+          "caption": "",
+          "name": "link",
+          "status": "inherit",
+          "uploadedTo": 0,
+          "date": 1639162181000,
+          "modified": 1639162181000,
+          "menuOrder": 0,
+          "mime": "image\/png",
+          "type": "image",
+          "subtype": "png",
+          "icon": "http:\/\/wp.test\/wp-includes\/images\/media\/default.png",
+          "dateFormatted": "December 10, 2021",
+          "nonces": {
+            "update": "6bfe384e20",
+            "delete": "64d61c3a20",
+            "edit": "d01dfa90fd"
+          },
+          "editLink": "http:\/\/wp.test\/wp-admin\/post.php?post=76&action=edit",
+          "meta": false,
+          "authorName": "admin",
+          "authorLink": "http:\/\/wp.test\/wp-admin\/profile.php",
+          "filesizeInBytes": 29614,
+          "filesizeHumanReadable": "29 KB",
+          "context": "",
+          "height": 512,
+          "width": 512,
+          "orientation": "landscape",
+          "sizes": {
+            "thumbnail": {
+              "height": 150,
+              "width": 150,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/link-150x150.png",
+              "orientation": "landscape"
+            },
+            "medium": {
+              "height": 300,
+              "width": 300,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/link-300x300.png",
+              "orientation": "landscape"
+            },
+            "full": {
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/link.png",
+              "height": 512,
+              "width": 512,
+              "orientation": "landscape"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Headphone Gamer",
+      "ID": 451,
+      "post_date": "2022-05-29 02:27:36",
+      "status": "publish",
+      "formatted_date": "May 29, 2022",
+      "regular_price": 260000,
+      "has_sale_price": true,
+      "sale_price": 160000,
+      "weight": 0,
+      "enable_volume": false,
+      "volume_width": 0,
+      "volume_height": 0,
+      "volume_length": 0,
+      "product_type": "psychical",
+      "image_ids": [
+        63,
+        64
+      ],
+      "product_images": [
+        {
+          "id": 63,
+          "title": "7142r-dqM2L._AC_SL1500_",
+          "filename": "7142r-dqM2L._AC_SL1500_.jpg",
+          "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/7142r-dqM2L._AC_SL1500_.jpg",
+          "link": "http:\/\/wp.test\/7142r-dqm2l-_ac_sl1500_\/",
+          "alt": "",
+          "author": "1",
+          "description": "",
+          "caption": "",
+          "name": "7142r-dqm2l-_ac_sl1500_",
+          "status": "inherit",
+          "uploadedTo": 0,
+          "date": 1639161622000,
+          "modified": 1639161622000,
+          "menuOrder": 0,
+          "mime": "image\/jpeg",
+          "type": "image",
+          "subtype": "jpeg",
+          "icon": "http:\/\/wp.test\/wp-includes\/images\/media\/default.png",
+          "dateFormatted": "December 10, 2021",
+          "nonces": {
+            "update": "6ebf5d084e",
+            "delete": "fb4bdd94ab",
+            "edit": "ee37db0c08"
+          },
+          "editLink": "http:\/\/wp.test\/wp-admin\/post.php?post=63&action=edit",
+          "meta": false,
+          "authorName": "admin",
+          "authorLink": "http:\/\/wp.test\/wp-admin\/profile.php",
+          "filesizeInBytes": 156558,
+          "filesizeHumanReadable": "153 KB",
+          "context": "",
+          "height": 1500,
+          "width": 1500,
+          "orientation": "landscape",
+          "sizes": {
+            "thumbnail": {
+              "height": 150,
+              "width": 150,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/7142r-dqM2L._AC_SL1500_-150x150.jpg",
+              "orientation": "landscape"
+            },
+            "medium": {
+              "height": 300,
+              "width": 300,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/7142r-dqM2L._AC_SL1500_-300x300.jpg",
+              "orientation": "landscape"
+            },
+            "large": {
+              "height": 980,
+              "width": 980,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/7142r-dqM2L._AC_SL1500_-1024x1024.jpg",
+              "orientation": "landscape"
+            },
+            "full": {
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/7142r-dqM2L._AC_SL1500_.jpg",
+              "height": 1500,
+              "width": 1500,
+              "orientation": "landscape"
+            }
+          }
+        },
+        {
+          "id": 64,
+          "title": "71ioZwVpKjL._AC_SL1500_",
+          "filename": "71ioZwVpKjL._AC_SL1500_.jpg",
+          "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/71ioZwVpKjL._AC_SL1500_.jpg",
+          "link": "http:\/\/wp.test\/71iozwvpkjl-_ac_sl1500_\/",
+          "alt": "",
+          "author": "1",
+          "description": "",
+          "caption": "",
+          "name": "71iozwvpkjl-_ac_sl1500_",
+          "status": "inherit",
+          "uploadedTo": 0,
+          "date": 1639161623000,
+          "modified": 1639161623000,
+          "menuOrder": 0,
+          "mime": "image\/jpeg",
+          "type": "image",
+          "subtype": "jpeg",
+          "icon": "http:\/\/wp.test\/wp-includes\/images\/media\/default.png",
+          "dateFormatted": "December 10, 2021",
+          "nonces": {
+            "update": "5da4748af7",
+            "delete": "90fc586b7b",
+            "edit": "4fb5c3e56b"
+          },
+          "editLink": "http:\/\/wp.test\/wp-admin\/post.php?post=64&action=edit",
+          "meta": false,
+          "authorName": "admin",
+          "authorLink": "http:\/\/wp.test\/wp-admin\/profile.php",
+          "filesizeInBytes": 152514,
+          "filesizeHumanReadable": "149 KB",
+          "context": "",
+          "height": 1500,
+          "width": 1381,
+          "orientation": "portrait",
+          "sizes": {
+            "thumbnail": {
+              "height": 150,
+              "width": 150,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/71ioZwVpKjL._AC_SL1500_-150x150.jpg",
+              "orientation": "landscape"
+            },
+            "medium": {
+              "height": 300,
+              "width": 276,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/71ioZwVpKjL._AC_SL1500_-276x300.jpg",
+              "orientation": "portrait"
+            },
+            "large": {
+              "height": 1024,
+              "width": 943,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/71ioZwVpKjL._AC_SL1500_-943x1024.jpg",
+              "orientation": "portrait"
+            },
+            "full": {
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2021\/12\/71ioZwVpKjL._AC_SL1500_.jpg",
+              "height": 1500,
+              "width": 1381,
+              "orientation": "portrait"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sepatu Jordan 23",
+      "ID": 453,
+      "post_date": "2022-05-29 14:04:49",
+      "status": "draft",
+      "formatted_date": "May 29, 2022",
+      "regular_price": 3500000,
+      "has_sale_price": true,
+      "sale_price": 1500000,
+      "weight": 2000,
+      "enable_volume": true,
+      "volume_width": 20,
+      "volume_height": 22,
+      "volume_length": 200,
+      "product_type": "psychical",
+      "image_ids": [
+        255,
+        254,
+        213
+      ],
+      "product_images": [
+        {
+          "id": 255,
+          "title": "sepatu-jordan",
+          "filename": "sepatu-jordan.jpeg",
+          "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/02\/sepatu-jordan.jpeg",
+          "link": "http:\/\/wp.test\/sepatu-jordan\/",
+          "alt": "",
+          "author": "1",
+          "description": "",
+          "caption": "",
+          "name": "sepatu-jordan",
+          "status": "inherit",
+          "uploadedTo": 0,
+          "date": 1645038389000,
+          "modified": 1645038389000,
+          "menuOrder": 0,
+          "mime": "image\/jpeg",
+          "type": "image",
+          "subtype": "jpeg",
+          "icon": "http:\/\/wp.test\/wp-includes\/images\/media\/default.png",
+          "dateFormatted": "February 17, 2022",
+          "nonces": {
+            "update": "a8eb7f2d9d",
+            "delete": "1c5723e1ea",
+            "edit": "7c4e3a12f7"
+          },
+          "editLink": "http:\/\/wp.test\/wp-admin\/post.php?post=255&action=edit",
+          "meta": false,
+          "authorName": "admin",
+          "authorLink": "http:\/\/wp.test\/wp-admin\/profile.php",
+          "filesizeInBytes": 37997,
+          "filesizeHumanReadable": "37 KB",
+          "context": "",
+          "height": 640,
+          "width": 640,
+          "orientation": "landscape",
+          "sizes": {
+            "thumbnail": {
+              "height": 150,
+              "width": 150,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/02\/sepatu-jordan-150x150.jpeg",
+              "orientation": "landscape"
+            },
+            "medium": {
+              "height": 300,
+              "width": 300,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/02\/sepatu-jordan-300x300.jpeg",
+              "orientation": "landscape"
+            },
+            "full": {
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/02\/sepatu-jordan.jpeg",
+              "height": 640,
+              "width": 640,
+              "orientation": "landscape"
+            }
+          }
+        },
+        {
+          "id": 254,
+          "title": "sepatu-jordan-2",
+          "filename": "sepatu-jordan-2.jpeg",
+          "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/02\/sepatu-jordan-2.jpeg",
+          "link": "http:\/\/wp.test\/sepatu-jordan-2\/",
+          "alt": "",
+          "author": "1",
+          "description": "",
+          "caption": "",
+          "name": "sepatu-jordan-2",
+          "status": "inherit",
+          "uploadedTo": 0,
+          "date": 1645038388000,
+          "modified": 1645038388000,
+          "menuOrder": 0,
+          "mime": "image\/jpeg",
+          "type": "image",
+          "subtype": "jpeg",
+          "icon": "http:\/\/wp.test\/wp-includes\/images\/media\/default.png",
+          "dateFormatted": "February 17, 2022",
+          "nonces": {
+            "update": "ea55125334",
+            "delete": "dade659ed0",
+            "edit": "7f52ec9c74"
+          },
+          "editLink": "http:\/\/wp.test\/wp-admin\/post.php?post=254&action=edit",
+          "meta": false,
+          "authorName": "admin",
+          "authorLink": "http:\/\/wp.test\/wp-admin\/profile.php",
+          "filesizeInBytes": 37989,
+          "filesizeHumanReadable": "37 KB",
+          "context": "",
+          "height": 640,
+          "width": 640,
+          "orientation": "landscape",
+          "sizes": {
+            "thumbnail": {
+              "height": 150,
+              "width": 150,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/02\/sepatu-jordan-2-150x150.jpeg",
+              "orientation": "landscape"
+            },
+            "medium": {
+              "height": 300,
+              "width": 300,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/02\/sepatu-jordan-2-300x300.jpeg",
+              "orientation": "landscape"
+            },
+            "full": {
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/02\/sepatu-jordan-2.jpeg",
+              "height": 640,
+              "width": 640,
+              "orientation": "landscape"
+            }
+          }
+        },
+        {
+          "id": 213,
+          "title": "71ioZwVpKjL._AC_SL1500_",
+          "filename": "71ioZwVpKjL._AC_SL1500_.jpg",
+          "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/01\/71ioZwVpKjL._AC_SL1500_.jpg",
+          "link": "http:\/\/wp.test\/71iozwvpkjl-_ac_sl1500_-2\/",
+          "alt": "",
+          "author": "1",
+          "description": "",
+          "caption": "",
+          "name": "71iozwvpkjl-_ac_sl1500_-2",
+          "status": "inherit",
+          "uploadedTo": 0,
+          "date": 1641358176000,
+          "modified": 1641358176000,
+          "menuOrder": 0,
+          "mime": "image\/jpeg",
+          "type": "image",
+          "subtype": "jpeg",
+          "icon": "http:\/\/wp.test\/wp-includes\/images\/media\/default.png",
+          "dateFormatted": "January 5, 2022",
+          "nonces": {
+            "update": "643d67794c",
+            "delete": "ceca989279",
+            "edit": "7f3334d0a8"
+          },
+          "editLink": "http:\/\/wp.test\/wp-admin\/post.php?post=213&action=edit",
+          "meta": false,
+          "authorName": "admin",
+          "authorLink": "http:\/\/wp.test\/wp-admin\/profile.php",
+          "filesizeInBytes": 152514,
+          "filesizeHumanReadable": "149 KB",
+          "context": "",
+          "height": 1500,
+          "width": 1381,
+          "orientation": "portrait",
+          "sizes": {
+            "thumbnail": {
+              "height": 150,
+              "width": 150,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/01\/71ioZwVpKjL._AC_SL1500_-150x150.jpg",
+              "orientation": "landscape"
+            },
+            "medium": {
+              "height": 300,
+              "width": 276,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/01\/71ioZwVpKjL._AC_SL1500_-276x300.jpg",
+              "orientation": "portrait"
+            },
+            "large": {
+              "height": 1024,
+              "width": 943,
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/01\/71ioZwVpKjL._AC_SL1500_-943x1024.jpg",
+              "orientation": "portrait"
+            },
+            "full": {
+              "url": "http:\/\/wp.test\/wp-content\/uploads\/2022\/01\/71ioZwVpKjL._AC_SL1500_.jpg",
+              "height": 1500,
+              "width": 1381,
+              "orientation": "portrait"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "_wp_order_form_products": [
+    275,
+    451,
+    453
+  ]
+}

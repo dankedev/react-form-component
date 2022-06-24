@@ -4,10 +4,10 @@ import { Icon } from '../Icons';
 import PropTypes from 'prop-types';
 
 // eslint-disable-next-line react/display-name
-const ButtonIcon = forwardRef(({ size, icon, ...res }, buttonRef) => {
+const ButtonIcon = forwardRef(({ size, icon, color, ...res }, buttonRef) => {
   return (
-    <Button {...res} iconOnly={true} size={size}>
-      <Icon name={icon} size={'inherit'} />{' '}
+    <Button {...res} iconOnly={true} size={size} color={color}>
+      <Icon name={icon} size={size} color={color} />
     </Button>
   );
 });

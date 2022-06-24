@@ -14,6 +14,7 @@ const Button = forwardRef(
       disableRipple,
       fullWidth,
       href,
+      buttonType,
       endIcon,
       startIcon,
       rounded,
@@ -27,7 +28,7 @@ const Button = forwardRef(
   ) => {
     const rippleEffect = new Ripple();
 
-    rounded = rounded ? 'rounded-full' : 'rounded';
+    rounded = rounded ? 'circle' : 'square';
 
     let mainClassName = [
       'fo-button',
@@ -62,7 +63,7 @@ const Button = forwardRef(
 
     mainClassName = mainClassName.filter((i) => i && typeof i !== 'undefined');
 
-    if (href) {
+    if (href && buttonType === 'link') {
       return (
         <a
           href={href}
@@ -104,7 +105,8 @@ Button.defaultProps = {
   rounded: false,
   startIcon: null,
   uppercase: true,
-  iconOnly: false
+  iconOnly: false,
+  buttonType: 'button'
 };
 
 Button.propTypes = {
@@ -136,7 +138,8 @@ Button.propTypes = {
   noShadow: PropTypes.bool,
   iconOnly: PropTypes.bool,
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-  href: PropTypes.oneOf([null, PropTypes.string]),
+  href: PropTypes.string,
+  buttonType: PropTypes.oneOf(['button', 'link']),
   endIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   startIcon: PropTypes.oneOfType([PropTypes.node, PropTypes.string])
 };

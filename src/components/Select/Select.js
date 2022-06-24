@@ -114,9 +114,9 @@ const Select = React.forwardRef(
           fuiOffset(offset),
           flip({ padding: 8 }),
           fuiSize({
-            apply({ reference, height }) {
+            apply({ reference }) {
               Object.assign(refs.floating.current?.style ?? {}, {
-                width: reference ? `${reference.width}px` : '100%5',
+                width: reference ? `${reference.width}px` : '100%',
                 zIndex: 99999
               });
             },
@@ -255,7 +255,8 @@ const Select = React.forwardRef(
     const buttonContentClasses = classnames(
       'absolute top-2/4 -translate-y-2/4',
       variant === 'outlined' ? 'left-3 pt-0.5' : 'left-0 pt-3',
-      'fo-btn-content'
+      'fo-btn-content',
+      state === 'open' ? 'px-4' : 'p-0'
     );
     // 5. set animation
     const animation = {
@@ -379,8 +380,6 @@ const Select = React.forwardRef(
             )}
           </NewAnimatePresence>
         </div>
-
-        {JSON.stringify(variant)}
       </SelectContextProvider>
     );
   }

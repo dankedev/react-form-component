@@ -5,6 +5,10 @@
     @apply focus:border-0;
   }
 
+  &.circle{
+    @apply rounded-full;
+  }
+
   &:not(.fo-text-not-uppercase) {
     @apply uppercase;
   }

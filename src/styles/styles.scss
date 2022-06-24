@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.w-content{
+.w-content {
   width: calc(100% - 200px);
 }
+
 @import "buttons";
 @import "icon";
 @import "text-fields/text-field";
@@ -11,3 +12,26 @@
 @import "radio";
 @import "select/index";
 //@import './node_modules/@material/react-text-field/index';
+
+input.plain-text{
+  @apply shadow-none pb-2 cursor-text leading-none focus:outline-0 focus:border-0 focus:outline-offset-0 focus:shadow-none focus-visible:outline-0 focus-visible:border-0 focus-visible:outline-offset-0 focus-visible:shadow-none;
+
+  &:focus-visible{
+    outline: none!important;
+    border:none;
+    box-shadow: none;
+  }
+}
+.toolbox-editor {
+  @apply fixed  bottom-0  bg-white rounded-t-md border transform transition-transform delay-75;
+  z-index: 999999;
+  width: 360px;
+  height: calc(100vh - 10em);
+  input[type="text"].tool-box-search{
+    @apply bg-white w-full py-2 px-4  plain-text;
+    appearance: textfield;
+    outline: none!important;
+    border: none!important;
+  }
+}
+

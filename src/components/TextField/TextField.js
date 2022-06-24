@@ -19,6 +19,7 @@ const TextField = forwardRef(
       placeholder,
       error,
       isRequired,
+      wrappClassName,
       multiline,
       disabled,
       ...others
@@ -52,7 +53,7 @@ const TextField = forwardRef(
       <div
         ref={wrapRef}
         id={`wrap-input-${id}`}
-        className={`fo-input-wrap fo-input-wrap-${variant} fo-input-wrap-${size} ${
+        className={`fo-input-wrap fo-input-wrap-${variant} ${wrappClassName} fo-input-wrap-${size} ${
           fullWidth ? 'w-full flex flex-col' : 'inline-flex flex-col '
         }`}>
         {variant === 'default' && (
@@ -104,6 +105,7 @@ TextField.defaultProps = {
   color: 'blue',
   label: '',
   placeholder: '',
+  wrappClassName: '',
   id: '',
   helperText: '',
   autoFocus: false,
@@ -138,6 +140,7 @@ TextField.propTypes = {
   onChange: PropTypes.func,
   label: PropTypes.string,
   placeholder: PropTypes.string,
+  wrappClassName: PropTypes.string,
   id: PropTypes.string,
   autoFocus: PropTypes.bool,
   error: PropTypes.string,

@@ -1,10 +1,12 @@
 // import {Select,Option,OptionGroup} from "../components/Select"
-import { Select, Option } from '../components/Select/Select';
-import { createRef } from 'react';
+import { Option, Select } from '../components/Select/Select';
+import { useRef } from 'react';
 import { TextField } from '../components';
+import SelectCity from '../components/Select/SelectCity';
+import SelectDistrict from '../components/Select/SelectDistrict';
 
 const SelectExample = () => {
-  const inputRef = createRef();
+  const inputRef = useRef('select-city');
 
   const variants = ['outlined', 'filled', 'standard'];
   return (
@@ -14,11 +16,7 @@ const SelectExample = () => {
       <div className="grid grid-cols-3 gap-6">
         {variants.map((variant, index) => (
           <div key={`select-variant-${variant}-${index}`} className="col-span-1 space-y-4">
-            <Select
-              variant={variant}
-              size={'small'}
-              ref={inputRef}
-              label="Select Version outlined large">
+            <Select variant={variant} size={'large'} label="Select Version outlined large">
               <Option>Material Tailwind HTML</Option>
               <Option>Material Tailwind React</Option>
               <Option>Material Tailwind Vue</Option>
@@ -35,6 +33,15 @@ const SelectExample = () => {
             />
           </div>
         ))}
+      </div>
+      <hr />
+      <div className="grid grid-cols-2 gap-6 mt-12">
+        <div className="col-span-1">
+          <SelectCity label={'Pilih Alamat'} />
+        </div>
+        <div className="col-span-1">
+          <SelectDistrict label={'Pilih Distrik'} ref={inputRef} />
+        </div>
       </div>
     </div>
   );
