@@ -4,11 +4,18 @@ import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 
 // eslint-disable-next-line react/display-name
-const RadioPreview = forwardRef(({ indexKey, type, active, field, ...others }, ref) => {
+const RadioPreview = forwardRef(({ indexKey, type, onSetting, active, field, ...others }, ref) => {
   const uuid = uuidv4();
 
   return (
-    <PreviewWrap {...others} indexKey={indexKey} active={active} id={uuid} ref={ref}>
+    <PreviewWrap
+      {...others}
+      ref={ref}
+      active={active}
+      field={field}
+      onSetting={onSetting}
+      indexKey={indexKey}
+      id={uuid}>
       <div className="flex items-start w-full space-x-2 pr-8">
         <div className={'text-button-blue relative w-8 h-8'}>
           <span
@@ -48,9 +55,10 @@ RadioPreview.defaultProps = {
 };
 RadioPreview.propTypes = {
   indexKey: PropTypes.number,
-  active: PropTypes.bool,
+  active: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   field: PropTypes.object,
-  type: PropTypes.string
+  type: PropTypes.string,
+  onSetting: PropTypes.func.isRequired
 };
 
 export default RadioPreview;

@@ -6,6 +6,7 @@ export const settingFields = [
     key: 'name',
     fieldType: 'name',
     type: 'text',
+    label: 'Nama Lengkap',
     settings: {
       label: fieldText,
       splitName: { ...fieldCheckbox, label: 'Pisahkan Nama depan dan belakang' },
@@ -88,39 +89,9 @@ export const settingFields = [
     }
   },
   {
-    key: 'hidden',
-    fieldType: 'hidden',
-    type: 'hidden',
-    settings: {
-      label: fieldText,
-      required: fieldCheckbox,
-      errorMessage: { ...fieldCheckbox, label: 'Pesan Error' }
-    }
-  },
-  {
-    key: 'url',
-    fieldType: 'url',
-    type: 'url',
-    settings: {
-      label: fieldText,
-      required: fieldCheckbox,
-      errorMessage: { ...fieldCheckbox, label: 'Pesan Error' }
-    }
-  },
-  {
     key: 'textarea',
     fieldType: 'textarea',
     type: 'textarea',
-    settings: {
-      label: fieldText,
-      required: fieldCheckbox,
-      errorMessage: { ...fieldCheckbox, label: 'Pesan Error' }
-    }
-  },
-  {
-    key: 'single_checkbox',
-    fieldType: 'single_checkbox',
-    type: 'single_checkbox',
     settings: {
       label: fieldText,
       required: fieldCheckbox,

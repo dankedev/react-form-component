@@ -4,10 +4,18 @@ import { v4 as uuidv4 } from 'uuid';
 import PreviewWrap from './PreviewWrap';
 
 // eslint-disable-next-line react/display-name
-const NamePreview = forwardRef(({ indexKey, active, field, ...others }, ref) => {
+const NamePreview = forwardRef(({ indexKey, type, onSetting, active, field, ...others }, ref) => {
   const uuid = uuidv4();
+
   return (
-    <PreviewWrap {...others} ref={ref} active={active} indexKey={indexKey} id={uuid}>
+    <PreviewWrap
+      {...others}
+      ref={ref}
+      active={active}
+      field={field}
+      onSetting={onSetting}
+      indexKey={indexKey}
+      id={uuid}>
       <div className="flex items-start w-full space-x-2 pr-8">
         <span className={'text-button-blue relative w-8 h-8'}>
           <span
@@ -49,8 +57,10 @@ NamePreview.defaultProps = {
 };
 NamePreview.propTypes = {
   indexKey: PropTypes.number,
-  active: PropTypes.bool,
-  field: PropTypes.object
+  active: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
+  field: PropTypes.object,
+  type: PropTypes.string,
+  onSetting: PropTypes.func.isRequired
 };
 
 export default NamePreview;

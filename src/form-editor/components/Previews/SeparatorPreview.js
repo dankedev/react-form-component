@@ -4,14 +4,24 @@ import { v4 as uuidv4 } from 'uuid';
 import PreviewWrap from './PreviewWrap';
 
 // eslint-disable-next-line react/display-name
-const SeparatorPreview = forwardRef(({ indexKey, type, active, field, ...others }, ref) => {
-  const uuid = uuidv4();
-  return (
-    <PreviewWrap {...others} ref={ref} active={active} indexKey={indexKey} id={uuid}>
-      <div className={`w-full flex-grow border-b`} />
-    </PreviewWrap>
-  );
-});
+const SeparatorPreview = forwardRef(
+  ({ indexKey, type, onSetting, active, field, ...others }, ref) => {
+    const uuid = uuidv4();
+
+    return (
+      <PreviewWrap
+        {...others}
+        ref={ref}
+        active={active}
+        field={field}
+        onSetting={onSetting}
+        indexKey={indexKey}
+        id={uuid}>
+        <div className={`w-full flex-grow border-b`} />
+      </PreviewWrap>
+    );
+  }
+);
 SeparatorPreview.defaultProps = {
   indexKey: 1,
   type: 'text',
@@ -19,8 +29,9 @@ SeparatorPreview.defaultProps = {
 };
 SeparatorPreview.propTypes = {
   indexKey: PropTypes.number,
-  active: PropTypes.bool,
+  active: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   field: PropTypes.object,
-  type: PropTypes.string
+  type: PropTypes.string,
+  onSetting: PropTypes.func.isRequired
 };
 export default SeparatorPreview;

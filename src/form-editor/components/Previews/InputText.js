@@ -4,11 +4,18 @@ import { v4 as uuidv4 } from 'uuid';
 import PreviewWrap from './PreviewWrap';
 
 // eslint-disable-next-line react/display-name
-const InputText = forwardRef(({ indexKey, type, active, field, ...others }, ref) => {
+const InputText = forwardRef(({ indexKey, type, onSetting, active, field, ...others }, ref) => {
   const uuid = uuidv4();
 
   return (
-    <PreviewWrap {...others} ref={ref} active={active} indexKey={indexKey} id={uuid}>
+    <PreviewWrap
+      {...others}
+      ref={ref}
+      active={active}
+      field={field}
+      onSetting={onSetting}
+      indexKey={indexKey}
+      id={uuid}>
       <div className="flex items-start w-full space-x-2 pr-8">
         <div className={'text-button-blue relative w-8 h-8'}>
           <span
@@ -43,8 +50,9 @@ InputText.defaultProps = {
 };
 InputText.propTypes = {
   indexKey: PropTypes.number,
-  active: PropTypes.bool,
+  active: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   field: PropTypes.object,
-  type: PropTypes.string
+  type: PropTypes.string,
+  onSetting: PropTypes.func.isRequired
 };
 export default InputText;

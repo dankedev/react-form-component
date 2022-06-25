@@ -52,5 +52,8 @@
   &.fo-button-deep-orange{
     @apply text-button-deep-orange  hover:text-opacity-75 focus:text-opacity-90;
   }
+  &.fo-button-gray{
+    @apply text-gray-500  hover:text-opacity-75 focus:text-opacity-90;
+  }
 
 }

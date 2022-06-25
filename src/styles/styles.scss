@@ -28,10 +28,9 @@ input.plain-text{
   width: 360px;
   height: calc(100vh - 10em);
   input[type="text"].tool-box-search{
-    @apply bg-white w-full py-2 px-4  plain-text;
+    @apply bg-white w-full py-2 px-4  plain-text border-b;
     appearance: textfield;
     outline: none!important;
-    border: none!important;
   }
 }
 

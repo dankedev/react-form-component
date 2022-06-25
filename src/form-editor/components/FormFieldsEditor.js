@@ -1,9 +1,11 @@
 /* eslint-disable */
 import { Button } from '../../components';
 import Icon from '../../components/Icons/Icon';
-import ToolBoxEditor from './ToolBoxEditor';
+import ToolBoxFields from './ToolBoxFields';
 import { useState } from 'react';
 import FormEditorPreviews from './Previews';
+import * as PropTypes from 'prop-types';
+import FieldSettingEditor from './FieldSettingEditor';
 
 const EmptyFields = ({ onClick, show }) => {
   return (<div className={'flex items-center justify-center h-64 flex flex-col gap-6'}>
@@ -18,9 +20,10 @@ const EmptyFields = ({ onClick, show }) => {
     <p>Click Plus Button to add a field.</p>
   </div>);
 };
-const FormFieldsEditor = ({ model,fields }) => {
+const FormFieldsEditor = ({ model, fields }) => {
   const [openToolBox, setOpenToolBox] = useState(true);
-  const [newFields,setNewFields] = useState(fields);
+  const [newFields, setNewFields] = useState(fields);
+  const [settingField, setSettingField] = useState(null);
 
   const handleOpenToolBox = () => {
     setOpenToolBox(!openToolBox);
@@ -28,17 +31,23 @@ const FormFieldsEditor = ({ model,fields }) => {
 
   const handleOnAddItems = (item) => {
     let items = newFields ?? [];
-      setNewFields([...items,item])
+    setNewFields([...items, item]);
+  };
+
+  const handleSetSetting = (field) => {
+    setSettingField(field);
   };
 
   return (<div className={'w-full h-full relative flex items-start'}>
-    <div className={'max-w-screen-md w-full px-6 md:px-0 mx-auto py-6 md:py-10'}>
-      {newFields.length ===0 &&  <EmptyFields onClick={handleOpenToolBox} show={openToolBox} />}
-      {newFields.length >=1 && <FormEditorPreviews fields={newFields}/> }
+    <div
+      className={`max-w-screen-md w-full px-6 md:px-0 py-6 md:py-10 mx-auto transition-transform ${openToolBox ? '-translate-x-40' : '-translate-x-0'}`}>
+      {newFields.length === 0 && <EmptyFields onClick={handleOpenToolBox} show={openToolBox} />}
+      {newFields.length >= 1 && <FormEditorPreviews fields={newFields} onSetting={handleSetSetting} />}
     </div>
-    <ToolBoxEditor show={openToolBox} hideToolBox={setOpenToolBox} onAddField={handleOnAddItems} />
-
-    {newFields.length >=1 && <div className={`fixed bottom-5 flex items-center justify-center w-full transition-transform ${openToolBox  ? 'translate-y-20':'translate-y-0'}`}>
+    <ToolBoxFields show={openToolBox} hideToolBox={setOpenToolBox} onAddField={handleOnAddItems} />
+    <FieldSettingEditor show={!!settingField} field={settingField} setField={setSettingField}/>
+    {newFields.length >= 1 && <div
+      className={`fixed bottom-5 flex items-center justify-center w-full transition-transform ${openToolBox ? 'translate-y-20' : 'translate-y-0'}`}>
       <Button onClick={handleOpenToolBox} size={'large'} variant={'contained'} rounded={true} iconOnly={true}>
         <Icon size={'extra-large'} name={'add'} />
       </Button>
@@ -46,8 +55,20 @@ const FormFieldsEditor = ({ model,fields }) => {
   </div>);
 };
 
-FormFieldsEditor.defaultProps ={
-  fields :[]
-}
+FormFieldsEditor.defaultProps = {
+  fields: []
+};
+
+FormFieldsEditor.propTypes = {
+  model: PropTypes.shape({
+    settings: PropTypes.shape({}),
+    ID: PropTypes.any,
+    title: PropTypes.any,
+    fields: PropTypes.arrayOf(PropTypes.any),
+    slug: PropTypes.any,
+    status: PropTypes.any,
+    products: PropTypes.arrayOf(PropTypes.any)
+  })
+};
 
 export default FormFieldsEditor;

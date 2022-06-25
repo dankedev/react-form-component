@@ -13,8 +13,8 @@ import ImageUploadPreview from './ImageUploadPreview';
 import FileUploadPreview from './FileUploadPreview';
 import DropDownPreview from './DropDownPreview';
 
-const FormEditorPreviews = ({ fields }) => {
-  const [activated, setActivated] = useState(null);
+const FormEditorPreviews = ({ fields, onSetting }) => {
+  const [activated, setActivated] = useState(0);
   const fieldRef = useMemo(() => {
     const refs = {};
     fields.forEach((item) => {
@@ -32,6 +32,7 @@ const FormEditorPreviews = ({ fields }) => {
           case 'name':
             component = (
               <NamePreview
+                onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}
                 field={field}
@@ -48,6 +49,7 @@ const FormEditorPreviews = ({ fields }) => {
           case 'textarea':
             component = (
               <InputText
+                onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}
                 field={field}
@@ -60,6 +62,7 @@ const FormEditorPreviews = ({ fields }) => {
           case 'address':
             component = (
               <AddressPreview
+                onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}
                 field={field}
@@ -72,6 +75,7 @@ const FormEditorPreviews = ({ fields }) => {
           case 'header_text':
             component = (
               <HeadingPreview
+                onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}
                 field={field}
@@ -84,6 +88,7 @@ const FormEditorPreviews = ({ fields }) => {
           case 'paragraph':
             component = (
               <ParagraphPreview
+                onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}
                 field={field}
@@ -96,6 +101,7 @@ const FormEditorPreviews = ({ fields }) => {
           case 'separator':
             component = (
               <SeparatorPreview
+                onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}
                 field={field}
@@ -108,6 +114,7 @@ const FormEditorPreviews = ({ fields }) => {
           case 'radio':
             component = (
               <RadioPreview
+                onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}
                 field={field}
@@ -120,6 +127,7 @@ const FormEditorPreviews = ({ fields }) => {
           case 'checkboxes':
             component = (
               <CheckBoxPreview
+                onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}
                 field={field}
@@ -132,6 +140,7 @@ const FormEditorPreviews = ({ fields }) => {
           case 'image':
             component = (
               <ImageUploadPreview
+                onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}
                 field={field}
@@ -144,6 +153,7 @@ const FormEditorPreviews = ({ fields }) => {
           case 'file':
             component = (
               <FileUploadPreview
+                onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}
                 field={field}
@@ -156,6 +166,7 @@ const FormEditorPreviews = ({ fields }) => {
           case 'dropdown':
             component = (
               <DropDownPreview
+                onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}
                 field={field}
@@ -175,7 +186,8 @@ const FormEditorPreviews = ({ fields }) => {
 };
 
 FormEditorPreviews.propTypes = {
-  fields: PropTypes.array
+  fields: PropTypes.array,
+  onSetting: PropTypes.func
 };
 
 export default FormEditorPreviews;

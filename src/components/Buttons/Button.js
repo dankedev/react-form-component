@@ -127,7 +127,8 @@ Button.propTypes = {
     'yellow',
     'amber',
     'orange',
-    'deep-orange'
+    'deep-orange',
+    'gray'
   ]),
   ripple: PropTypes.string,
   disabled: PropTypes.bool,
