@@ -1,8 +1,8 @@
 import { useMemo, createRef, useState } from 'react';
-
 import PropTypes from 'prop-types';
+
 import NamePreview from './NamePreview';
-import InputText from './InputText';
+import InputTextPreview from './InputTextPreview';
 import AddressPreview from './AddressPreview';
 import HeadingPreview from './HeadingPreview';
 import ParagraphPreview from './ParagraphPreview';
@@ -48,7 +48,7 @@ const FormEditorPreviews = ({ fields, onSetting }) => {
           case 'date':
           case 'textarea':
             component = (
-              <InputText
+              <InputTextPreview
                 onSetting={onSetting}
                 onClick={() => setActivated(indexKey)}
                 active={activated}

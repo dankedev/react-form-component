@@ -15,9 +15,9 @@ const PreviewWrap = forwardRef(
         id={uuid}
         className={`${
           active === indexKey ? 'border-blue-600 shadow-md' : 'border-transparent'
-        } space-y-3 group bg-white border rounded-md transition-all cursor-pointer border-dashed relative pb-4`}>
+        } space-y-1 group bg-white border rounded-md transition-all cursor-pointer border-dashed relative pb-4`}>
         {active === indexKey && (
-          <div className="w-full flex items-center justify-between   w-full">
+          <div className="w-full flex items-center justify-between  absolute top-0 left-0 w-full">
             <span />
             <span />
             <div className={`flex items-center`}>
